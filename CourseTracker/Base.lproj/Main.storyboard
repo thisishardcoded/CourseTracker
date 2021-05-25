@@ -94,16 +94,16 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ITy-8U-yPn" userLabel="Title form">
-                                <rect key="frame" x="15" y="71" width="345" height="68"/>
+                                <rect key="frame" x="15" y="71" width="345" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d65-E5-LvX" userLabel="Title label">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XsI-CD-Coj" userLabel="Title field">
-                                        <rect key="frame" x="0.0" y="34" width="345" height="34"/>
+                                        <rect key="frame" x="0.0" y="30" width="345" height="34"/>
                                         <color key="backgroundColor" name="AppLightBlue"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -111,16 +111,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IcN-Qv-WVJ" userLabel="Website form">
-                                <rect key="frame" x="15" y="154" width="345" height="210"/>
+                                <rect key="frame" x="15" y="150" width="345" height="206"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkw-Zc-OAn" userLabel="Website label">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SCS-Nd-P2V">
-                                        <rect key="frame" x="0.0" y="34" width="345" height="176"/>
+                                        <rect key="frame" x="0.0" y="30" width="345" height="176"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="176" id="dNw-iP-JjX"/>
@@ -129,28 +129,28 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wCd-nk-PNe" userLabel="Duration form">
-                                <rect key="frame" x="15" y="379" width="345" height="68"/>
+                                <rect key="frame" x="15" y="371" width="345" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vc7-Xw-oF1" userLabel="Duration label">
-                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="20"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZF3-yw-nd1" userLabel="Fields">
-                                        <rect key="frame" x="0.0" y="34" width="274" height="34"/>
+                                        <rect key="frame" x="0.0" y="30" width="244" height="34"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zpH-1d-mH7" userLabel="Hours">
-                                                <rect key="frame" x="0.0" y="0.0" width="132" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="117" height="34"/>
                                                 <subviews>
                                                     <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gym-Cx-YKA" userLabel="Hours field">
-                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="34"/>
                                                         <color key="backgroundColor" name="AppLightBlue"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICJ-9Z-mW0" userLabel="Hours label">
-                                                        <rect key="frame" x="71" y="0.0" width="61" height="34"/>
+                                                        <rect key="frame" x="63.5" y="0.0" width="53.5" height="34"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                         <color key="textColor" name="AppGrey"/>
                                                         <nil key="highlightedColor"/>
@@ -158,16 +158,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bz2-kO-tcb" userLabel="Minutes">
-                                                <rect key="frame" x="142" y="0.0" width="132" height="34"/>
+                                                <rect key="frame" x="127" y="0.0" width="117" height="34"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hwi-tg-JbY" userLabel="Minutes field">
-                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="34"/>
                                                         <color key="backgroundColor" name="AppLightBlue"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="minutes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bU-Cv-bl2">
-                                                        <rect key="frame" x="71" y="0.0" width="61" height="34"/>
+                                                        <rect key="frame" x="63.5" y="0.0" width="53.5" height="34"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                         <color key="textColor" name="AppGrey"/>
                                                         <nil key="highlightedColor"/>
@@ -525,16 +525,16 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Srq-YN-wJ6" userLabel="Taken time form">
-                                <rect key="frame" x="15" y="154" width="345" height="68"/>
+                                <rect key="frame" x="15" y="150" width="345" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time taken" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezH-AV-UJG">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="trW-ie-tmq" userLabel="Fields">
-                                        <rect key="frame" x="0.0" y="34" width="345" height="34"/>
+                                        <rect key="frame" x="0.0" y="30" width="345" height="34"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LU8-ag-GaW" userLabel="Hours">
                                                 <rect key="frame" x="0.0" y="0.0" width="167.5" height="34"/>
@@ -575,16 +575,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fM4-uh-hxG" userLabel="Completed time form">
-                                <rect key="frame" x="15" y="71" width="345" height="68"/>
+                                <rect key="frame" x="15" y="71" width="345" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of course completed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gaw-ab-Nbf" userLabel="Completed form label">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9fw-en-y5V" userLabel="Fields">
-                                        <rect key="frame" x="0.0" y="34" width="345" height="34"/>
+                                        <rect key="frame" x="0.0" y="30" width="345" height="34"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5nO-O8-crG" userLabel="Hours">
                                                 <rect key="frame" x="0.0" y="0.0" width="167.5" height="34"/>

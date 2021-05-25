@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Course" representedClassName=".Course" syncable="YES" codeGenerationType="class">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="duration" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="iconReference" optional="YES" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="website" attributeType="String"/>
+        <relationship name="logs" toMany="YES" deletionRule="Nullify" destinationEntity="LogItem" inverseName="parentCourse" inverseEntity="LogItem"/>
+    </entity>
+    <entity name="LogItem" representedClassName=".LogItem" syncable="YES" codeGenerationType="class">
+        <attribute name="completed" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="taken" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="parentCourse" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="logs" inverseEntity="Course"/>
+    </entity>
+    <elements>
+        <element name="Course" positionX="-604.95703125" positionY="64.95703125" width="128" height="133"/>
+        <element name="LogItem" positionX="-352.4609375" positionY="67.0703125" width="128" height="103"/>
+    </elements>
+</model>

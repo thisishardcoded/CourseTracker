@@ -15,6 +15,8 @@ class LogProgressViewController: UIViewController {
     @IBOutlet weak var hoursCompleted: UITextField!
     @IBOutlet weak var minutesTaken: UITextField!
     @IBOutlet weak var saveLogProgress: UIBarButtonItem!
+    @IBOutlet weak var allForms: UIStackView!
+    @IBOutlet weak var scrollViewBottom: NSLayoutConstraint!
     
     private var allFields:[UITextField] = []
     
@@ -28,11 +30,24 @@ class LogProgressViewController: UIViewController {
         hoursCompleted.delegate = self
         minutesTaken.delegate = self
         allFields = [hoursTaken, minutesCompleted, hoursCompleted, minutesTaken]
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShown(keyboardShowNotification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHidden(keyboardDidHideNotification:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
+    
+    @objc private func keyboardShown(keyboardShowNotification notification: Notification) {
+        if let userInfo = notification.userInfo {
+            let keyboardHeight = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue.size.height
+            scrollViewBottom.constant = -keyboardHeight
+        }
+    }
+    
+    @objc private func keyboardHidden(keyboardDidHideNotification notification: Notification) {
+        scrollViewBottom.constant = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        hoursCompleted.becomeFirstResponder()
+        hoursTaken.becomeFirstResponder()
     }
     
     @IBAction func saveLogProgress(_ sender: UIBarButtonItem) {

@@ -16,6 +16,8 @@ class AddCourseViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var saveAddCourse: UIBarButtonItem!
     @IBOutlet weak var websiteList: UITableView!
     
+    @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var tableHeight: NSLayoutConstraint!
     
     private var requiredFields:[UITextField] = []
@@ -59,6 +61,19 @@ class AddCourseViewController: UIViewController, UITableViewDelegate {
         websiteList.dataSource = self
         websiteList.register(UINib(nibName: "NamedSiteCell", bundle: nil), forCellReuseIdentifier: "NamedSiteCell")
         websiteList.register(UINib(nibName: "OtherSiteCell", bundle: nil), forCellReuseIdentifier: "OtherSiteCell")
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShown(keyboardShowNotification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHidden(keyboardDidHideNotification:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
+    
+    @objc private func keyboardShown(keyboardShowNotification notification: Notification) {
+        if let userInfo = notification.userInfo {
+            let keyboardHeight = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue.size.height
+            scrollViewBottomConstraint.constant = -keyboardHeight
+        }
+    }
+    
+    @objc private func keyboardHidden(keyboardDidHideNotification notification: Notification) {
+        scrollViewBottomConstraint.constant = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {

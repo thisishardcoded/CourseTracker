@@ -88,7 +88,7 @@ class AddCourseViewController: UIViewController, UITableViewDelegate {
     @IBAction func saveAddCourse(_ sender: UIBarButtonItem) {
         if let delegate = self.delegate {
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext,
-                totalSecondsDuration = Int32(courseMinutes.text!)! + (Int32(courseHours.text!)! * 60) * 60,
+                totalSecondsDuration = (Int32(courseMinutes.text!)! + Int32(courseHours.text!)! * 60) * 60,
                 course = Course(context: context)
             course.duration = totalSecondsDuration
             course.title = courseTitle.text

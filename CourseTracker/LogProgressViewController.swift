@@ -68,7 +68,7 @@ class LogProgressViewController: UIViewController {
                 print("Error saving context \(error)")
             }
         }
-        self.dismiss(animated: true, completion: nil)
+        // self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelLogProgresss(_ sender: UIBarButtonItem) {

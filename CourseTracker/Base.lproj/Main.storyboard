@@ -233,7 +233,7 @@
             </objects>
             <point key="canvasLocation" x="165.59999999999999" y="881.10944527736137"/>
         </scene>
-        <!--Course-->
+        <!--Course View Controller-->
         <scene sceneID="Lkf-uo-Dgs">
             <objects>
                 <viewController id="Ntm-2a-0DB" customClass="CourseViewController" customModule="CourseTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -256,11 +256,15 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WithSeparator" translatesAutoresizingMaskIntoConstraints="NO" id="5HC-4U-eHR">
                                                         <rect key="frame" x="0.0" y="64.5" width="375" height="60"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Udemy.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T82-MC-YnN">
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Udemy.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T82-MC-YnN">
                                                         <rect key="frame" x="19" y="99.5" width="337.5" height="18.5"/>
+                                                        <gestureRecognizers/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="30"/>
                                                         <color key="textColor" name="AppGrey"/>
                                                         <nil key="highlightedColor"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="ECc-6D-GZB" appends="YES" id="AwZ-ZS-v1X"/>
+                                                        </connections>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Complete iOS App Development Bootcamp" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nou-6p-gD9">
                                                         <rect key="frame" x="47" y="31" width="281" height="62"/>
@@ -496,13 +500,33 @@
                             <constraint firstItem="SMe-pG-cCw" firstAttribute="leading" secondItem="vII-SY-cyg" secondAttribute="leading" id="fSF-JX-2DO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Course" id="YfB-jE-Fhg">
-                        <barButtonItem key="rightBarButtonItem" title="Log" id="uQt-Mv-Dzr">
-                            <color key="tintColor" name="AppGreen"/>
-                            <connections>
-                                <segue destination="fyN-Hg-7s9" kind="presentation" identifier="logProgressView" id="Yhu-bd-6SV"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" id="YfB-jE-Fhg">
+                        <rightBarButtonItems>
+                            <barButtonItem image="hourglass.badge.plus" catalog="system" id="uQt-Mv-Dzr" userLabel="Log progress">
+                                <color key="tintColor" name="AppGreen"/>
+                                <connections>
+                                    <segue destination="fyN-Hg-7s9" kind="presentation" identifier="logProgressView" id="Yhu-bd-6SV"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="arrow.uturn.left" catalog="system" id="eo8-CP-Nlz" userLabel="Undo last log">
+                                <color key="tintColor" name="AppGreen"/>
+                                <connections>
+                                    <action selector="undoLastLogPressed:" destination="Ntm-2a-0DB" id="EZq-3J-qpz"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="trash" catalog="system" id="50q-rK-dwt">
+                                <color key="tintColor" name="AppGreen"/>
+                                <connections>
+                                    <action selector="deleteCoursePressed:" destination="Ntm-2a-0DB" id="zoM-vm-EkX"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="pencil" catalog="system" id="Qbc-uS-Pjk">
+                                <color key="tintColor" name="AppGreen"/>
+                                <connections>
+                                    <segue destination="bAf-dF-NCi" kind="presentation" identifier="editCourseView" id="Y7T-UB-he1"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="averageRatio" destination="cb5-oL-zxn" id="jle-oq-uft"/>
@@ -511,12 +535,167 @@
                         <outlet property="estimatedTimeRemaining" destination="6Nb-2a-B5G" id="3x0-e2-dQD"/>
                         <outlet property="percentageCompleted" destination="xRP-wk-YB3" id="lDB-tq-v2p"/>
                         <outlet property="timeSpent" destination="Awo-AC-A0G" id="nON-ZT-NCn"/>
+                        <outlet property="undoLogsButton" destination="eo8-CP-Nlz" id="yfn-dj-oRo"/>
                         <outlet property="websiteSubtitle" destination="T82-MC-YnN" id="ewX-Mv-qAz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFX-dI-ybt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ECc-6D-GZB">
+                    <connections>
+                        <action selector="tapURL:" destination="Ntm-2a-0DB" id="49F-tt-AAA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="944.36310395314786" y="80.2734375"/>
+        </scene>
+        <!--Edit Course View Controller-->
+        <scene sceneID="ZnQ-2v-ekA">
+            <objects>
+                <viewController id="bAf-dF-NCi" customClass="EditCourseViewController" customModule="CourseTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ycP-6x-ubl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" shadowImage="WhiteRectangle" translatesAutoresizingMaskIntoConstraints="NO" id="icT-h7-d21">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Edit Course" id="CNp-lb-u3i">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ks2-CY-6rN">
+                                            <color key="tintColor" name="AppGreen"/>
+                                            <connections>
+                                                <action selector="cancelEditCourse:" destination="bAf-dF-NCi" id="0VU-1n-yOp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="BL1-wf-Cso">
+                                            <color key="tintColor" name="AppGreen"/>
+                                            <connections>
+                                                <action selector="saveEditCourse:" destination="bAf-dF-NCi" id="7IR-BZ-54v"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VlY-Ul-VWX">
+                                <rect key="frame" x="0.0" y="56" width="375" height="591"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1J2-sL-Rdg" userLabel="All forms">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XZz-B0-L5h" userLabel="Title form">
+                                                <rect key="frame" x="15" y="0.0" width="345" height="68"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5t-mp-vWT" userLabel="Title label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="24"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="90f-6S-s4B" userLabel="Title field">
+                                                        <rect key="frame" x="0.0" y="34" width="345" height="34"/>
+                                                        <color key="backgroundColor" name="AppLightBlue"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SBL-Gt-KXM" userLabel="Duration form">
+                                                <rect key="frame" x="15" y="88" width="345" height="68"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmW-CJ-8a1" userLabel="Duration label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="24"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YqE-jB-5Or" userLabel="Fields">
+                                                        <rect key="frame" x="0.0" y="34" width="345" height="34"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xTc-FZ-Y8l" userLabel="Hours">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="34"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqt-75-QOi" userLabel="Hours field">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="34"/>
+                                                                        <color key="backgroundColor" name="AppLightBlue"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                    </textField>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFO-y8-6t4" userLabel="Hours label">
+                                                                        <rect key="frame" x="89" y="0.0" width="78.5" height="34"/>
+                                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                                                        <color key="textColor" name="AppGrey"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bbm-Hf-ZOy" userLabel="Minutes">
+                                                                <rect key="frame" x="177.5" y="0.0" width="167.5" height="34"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Hu-Id-na4" userLabel="Minutes field">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="34"/>
+                                                                        <color key="backgroundColor" name="AppLightBlue"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                    </textField>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="minutes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlu-Ye-LyI">
+                                                                        <rect key="frame" x="89" y="0.0" width="78.5" height="34"/>
+                                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                                                        <color key="textColor" name="AppGrey"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.56444152739999998" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="YqE-jB-5Or" firstAttribute="leading" secondItem="SBL-Gt-KXM" secondAttribute="leading" id="54J-tZ-ZYh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="YqE-jB-5Or" secondAttribute="trailing" id="JTw-B3-bt0"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.23138648270000001" blue="0.18827459220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="15" bottom="15" trailing="15"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1J2-sL-Rdg" firstAttribute="bottom" secondItem="sUg-HY-e9K" secondAttribute="bottom" id="Di9-BG-4Cd"/>
+                                    <constraint firstItem="1J2-sL-Rdg" firstAttribute="trailing" secondItem="sUg-HY-e9K" secondAttribute="trailing" id="RvC-Vx-2LP"/>
+                                    <constraint firstItem="1J2-sL-Rdg" firstAttribute="width" secondItem="FqN-OJ-Nlk" secondAttribute="width" id="TU8-NN-r6f"/>
+                                    <constraint firstItem="1J2-sL-Rdg" firstAttribute="top" secondItem="sUg-HY-e9K" secondAttribute="top" id="a8u-b9-EQ7"/>
+                                    <constraint firstItem="1J2-sL-Rdg" firstAttribute="leading" secondItem="sUg-HY-e9K" secondAttribute="leading" id="bOn-EI-aYB"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="sUg-HY-e9K"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="FqN-OJ-Nlk"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gLi-ot-OBa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="icT-h7-d21" firstAttribute="leading" secondItem="gLi-ot-OBa" secondAttribute="leading" id="BqA-8L-ofz"/>
+                            <constraint firstItem="VlY-Ul-VWX" firstAttribute="leading" secondItem="gLi-ot-OBa" secondAttribute="leading" id="PrV-u5-Aoz"/>
+                            <constraint firstItem="VlY-Ul-VWX" firstAttribute="bottom" secondItem="gLi-ot-OBa" secondAttribute="bottom" id="Ti1-yo-cCJ"/>
+                            <constraint firstItem="icT-h7-d21" firstAttribute="top" secondItem="gLi-ot-OBa" secondAttribute="top" id="l1D-g8-sq5"/>
+                            <constraint firstItem="VlY-Ul-VWX" firstAttribute="trailing" secondItem="gLi-ot-OBa" secondAttribute="trailing" id="ojP-zj-Q8R"/>
+                            <constraint firstItem="VlY-Ul-VWX" firstAttribute="top" secondItem="icT-h7-d21" secondAttribute="bottom" id="ppa-2k-X7x"/>
+                            <constraint firstItem="icT-h7-d21" firstAttribute="trailing" secondItem="gLi-ot-OBa" secondAttribute="trailing" id="y3z-40-jZq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="courseTitle" destination="90f-6S-s4B" id="kPv-2Q-V2M"/>
+                        <outlet property="hours" destination="hqt-75-QOi" id="PwX-OV-kib"/>
+                        <outlet property="minutes" destination="1Hu-Id-na4" id="AKE-v9-Szu"/>
+                        <outlet property="saveEditCourse" destination="BL1-wf-Cso" id="fgH-Vj-Wxj"/>
+                        <outlet property="scrollViewBottom" destination="Ti1-yo-cCJ" id="jEi-mL-5uE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3OB-sI-aKR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="79.610194902548727"/>
         </scene>
         <!--Log Progress View Controller-->
         <scene sceneID="cUU-Ml-Br4">
@@ -726,6 +905,10 @@
         <image name="Graph" width="295" height="294"/>
         <image name="WhiteRectangle" width="1" height="1"/>
         <image name="WithSeparator" width="375" height="60"/>
+        <image name="arrow.uturn.left" catalog="system" width="128" height="112"/>
+        <image name="hourglass.badge.plus" catalog="system" width="106" height="128"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="AppGreen">
             <color red="0.33300000429153442" green="0.79199999570846558" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

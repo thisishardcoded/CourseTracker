@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381040FD265FE83600ADAFCA /* EditCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381040FC265FE83600ADAFCA /* EditCourseViewController.swift */; };
 		38251FB02653CB42003F0A99 /* ModalDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38251FAF2653CB42003F0A99 /* ModalDelegate.swift */; };
 		38251FB42653DB66003F0A99 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38251FB22653DB66003F0A99 /* DataModel.xcdatamodeld */; };
 		38429A00264978180040FFD2 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 384299EE264978180040FFD2 /* Poppins-Bold.ttf */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		381040FC265FE83600ADAFCA /* EditCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCourseViewController.swift; sourceTree = "<group>"; };
 		38251FAF2653CB42003F0A99 /* ModalDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDelegate.swift; sourceTree = "<group>"; };
 		38251FB32653DB66003F0A99 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		384299EE264978180040FFD2 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		386FD62226453CC1006DE7A1 /* CourseTracker */ = {
 			isa = PBXGroup;
 			children = (
+				381040FC265FE83600ADAFCA /* EditCourseViewController.swift */,
 				38251FB22653DB66003F0A99 /* DataModel.xcdatamodeld */,
 				38C729C126496D4E001CD797 /* Fonts */,
 				386FD63C26454B13006DE7A1 /* CourseViewController.swift */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381040FD265FE83600ADAFCA /* EditCourseViewController.swift in Sources */,
 				38AE2D5C26528EB800CCA14B /* AddCourseCell.swift in Sources */,
 				386EE0DB265C051A00036CEE /* OtherSiteCell.swift in Sources */,
 				38251FB42653DB66003F0A99 /* DataModel.xcdatamodeld in Sources */,

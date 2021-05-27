@@ -22,6 +22,10 @@ class AllCoursesViewController: UIViewController, UITableViewDataSource {
         allCourses.delegate = self
         allCourses.register(UINib(nibName: "CourseCell", bundle: nil), forCellReuseIdentifier: "CourseCell")
         allCourses.register(UINib(nibName: "AddCourseCell", bundle: nil), forCellReuseIdentifier: "AddCourseCell")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         loadCourses()
     }
     
@@ -35,6 +39,7 @@ class AllCoursesViewController: UIViewController, UITableViewDataSource {
         } catch {
             print("Error loading context \(error)")
         }
+        allCourses.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -84,7 +89,6 @@ extension AllCoursesViewController: ModalDelegate {
     func modalReturnsAddCourse(_ success: Bool) {
         if success {
             loadCourses()
-            allCourses.reloadData()
         }
     }
 }

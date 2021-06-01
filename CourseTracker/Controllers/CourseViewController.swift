@@ -17,6 +17,7 @@ class CourseViewController: UIViewController {
     // secondary stats
     @IBOutlet weak var courseLength: UILabel!
     @IBOutlet weak var timeSpent: UILabel!
+    @IBOutlet weak var timeCompleted: UILabel!
     
     // graph
     @IBOutlet weak var percentageCompleted: UILabel!
@@ -28,7 +29,6 @@ class CourseViewController: UIViewController {
     @IBOutlet weak var undoLogsButton: UIBarButtonItem!
     
     var course:Course?
-//    let tap = UITapGestureRecognizer(target: self, action: #selector(tapFunction))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +66,7 @@ class CourseViewController: UIViewController {
         let average = totalTimeTaken > 0 ? Float(totalTimeCompleted) / Float(totalTimeTaken) : 0
         averageRatio.text = String(format: "%.3f", average)
         estimatedTimeRemaining.text = totalTimeTaken > 0 ? formatter.string(from: TimeInterval( Float((course!.duration - totalTimeCompleted)) / average ))! : courseLength.text
-        //print(formatter.string(from: TimeInterval(totalTimeCompleted))!)
+        timeCompleted.text = formatter.string(from: TimeInterval(totalTimeCompleted))!
         let p = (Float(totalTimeCompleted) / Float(course!.duration)) * 100
         percentageCompleted.text = "\(String(format: "%.0f", p))%"
         
@@ -140,14 +140,27 @@ class CourseViewController: UIViewController {
     }
     
     func deleteEntireCourse(action: UIAlertAction) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext,
-            sortedItems = (course!.logs as! Set<LogItem>).sorted(by: { $0.date! < $1.date! })
-        // BETTER ???
-        if sortedItems.count > 0 {
-            for i in 0...sortedItems.count - 1 {
-                context.delete(sortedItems[i])
-            }
-        }
+        
+//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//
+//        let fetchRequest: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LogItem")
+//        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+//
+//        do {
+//            try context.executeAndMergeChanges(using: batchDeleteRequest)
+//            navigationController?.popViewController(animated: true)
+//        } catch {
+//            print("Error saving context \(error)")
+//        }
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext/*,
+            sortedItems = (course!.logs as! Set<LogItem>).sorted(by: { $0.date! < $1.date! })*/
+        
+//        if sortedItems.count > 0 {
+//            for i in 0...sortedItems.count - 1 {
+//                context.delete(sortedItems[i])
+//            }
+//        }
         context.delete(course!)
         do {
             try context.save()
@@ -170,4 +183,16 @@ extension CourseViewController: ModalDelegate {
     
 }
 
-
+extension NSManagedObjectContext {
+    
+    /// Executes the given `NSBatchDeleteRequest` and directly merges the changes to bring the given managed object context up to date.
+    ///
+    /// - Parameter batchDeleteRequest: The `NSBatchDeleteRequest` to execute.
+    /// - Throws: An error if anything went wrong executing the batch deletion.
+    public func executeAndMergeChanges(using batchDeleteRequest: NSBatchDeleteRequest) throws {
+        batchDeleteRequest.resultType = .resultTypeObjectIDs
+        let result = try execute(batchDeleteRequest) as? NSBatchDeleteResult
+        let changes: [AnyHashable: Any] = [NSDeletedObjectsKey: result?.result as? [NSManagedObjectID] ?? []]
+        NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes, into: [self])
+    }
+}

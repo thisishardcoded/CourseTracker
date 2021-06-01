@@ -40,7 +40,13 @@ class EditCourseViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardShown(keyboardShowNotification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardHidden(keyboardDidHideNotification:)), name: UIResponder.keyboardDidHideNotification, object: nil)
         checkSaveEnabledConditions()
+        //courseTitle
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        courseTitle.becomeFirstResponder()
     }
 
     @objc private func keyboardShown(keyboardShowNotification notification: Notification) {

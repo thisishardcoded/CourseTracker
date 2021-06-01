@@ -6,7 +6,7 @@
         <attribute name="iconReference" optional="YES" attributeType="String"/>
         <attribute name="title" attributeType="String"/>
         <attribute name="website" attributeType="String"/>
-        <relationship name="logs" toMany="YES" deletionRule="Nullify" destinationEntity="LogItem" inverseName="parentCourse" inverseEntity="LogItem"/>
+        <relationship name="logs" toMany="YES" deletionRule="Cascade" destinationEntity="LogItem" inverseName="parentCourse" inverseEntity="LogItem"/>
     </entity>
     <entity name="LogItem" representedClassName=".LogItem" syncable="YES" codeGenerationType="class">
         <attribute name="completed" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES"/>

@@ -31,7 +31,6 @@
 		3845EA75265CEEC80017E5AF /* OtherSiteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3845EA74265CEEC80017E5AF /* OtherSiteTextField.swift */; };
 		386EE0C9265BC96700036CEE /* NamedSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386EE0C7265BC96700036CEE /* NamedSiteCell.swift */; };
 		386EE0CA265BC96700036CEE /* NamedSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386EE0C8265BC96700036CEE /* NamedSiteCell.xib */; };
-		386EE0CD265BEF3600036CEE /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386EE0CC265BEF3600036CEE /* SelfSizedTableView.swift */; };
 		386EE0D3265BFF7600036CEE /* OtherSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386EE0D2265BFF7600036CEE /* OtherSiteCell.xib */; };
 		386EE0DB265C051A00036CEE /* OtherSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386EE0DA265C051A00036CEE /* OtherSiteCell.swift */; };
 		386FD62426453CC1006DE7A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386FD62326453CC1006DE7A1 /* AppDelegate.swift */; };
@@ -74,7 +73,6 @@
 		3845EA74265CEEC80017E5AF /* OtherSiteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherSiteTextField.swift; sourceTree = "<group>"; };
 		386EE0C7265BC96700036CEE /* NamedSiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamedSiteCell.swift; sourceTree = "<group>"; };
 		386EE0C8265BC96700036CEE /* NamedSiteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NamedSiteCell.xib; sourceTree = "<group>"; };
-		386EE0CC265BEF3600036CEE /* SelfSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
 		386EE0D2265BFF7600036CEE /* OtherSiteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherSiteCell.xib; sourceTree = "<group>"; };
 		386EE0DA265C051A00036CEE /* OtherSiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherSiteCell.swift; sourceTree = "<group>"; };
 		386FD62026453CC1006DE7A1 /* CourseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,30 +122,13 @@
 		386FD62226453CC1006DE7A1 /* CourseTracker */ = {
 			isa = PBXGroup;
 			children = (
-				381040FC265FE83600ADAFCA /* EditCourseViewController.swift */,
-				38251FB22653DB66003F0A99 /* DataModel.xcdatamodeld */,
+				38EB04BD26663F3200053418 /* Model */,
+				38EB04BB26663EDD00053418 /* Views */,
+				38EB04BA26663E8700053418 /* Controllers */,
 				38C729C126496D4E001CD797 /* Fonts */,
-				386FD63C26454B13006DE7A1 /* CourseViewController.swift */,
-				386FD62326453CC1006DE7A1 /* AppDelegate.swift */,
-				386FD62526453CC1006DE7A1 /* SceneDelegate.swift */,
 				386FD62926453CC1006DE7A1 /* Main.storyboard */,
-				386EE0CC265BEF3600036CEE /* SelfSizedTableView.swift */,
 				386FD62C26453CC2006DE7A1 /* Assets.xcassets */,
-				386FD62E26453CC2006DE7A1 /* LaunchScreen.storyboard */,
 				386FD63126453CC2006DE7A1 /* Info.plist */,
-				386FD63826454378006DE7A1 /* AllCoursesViewController.swift */,
-				386FD64026454CEF006DE7A1 /* LogProgressViewController.swift */,
-				386FD64326454E2B006DE7A1 /* AddCourseViewController.swift */,
-				3845EA74265CEEC80017E5AF /* OtherSiteTextField.swift */,
-				386EE0DA265C051A00036CEE /* OtherSiteCell.swift */,
-				386EE0C7265BC96700036CEE /* NamedSiteCell.swift */,
-				386EE0C8265BC96700036CEE /* NamedSiteCell.xib */,
-				386EE0D2265BFF7600036CEE /* OtherSiteCell.xib */,
-				38AE2D552652758A00CCA14B /* CourseCell.swift */,
-				38AE2D562652758A00CCA14B /* CourseCell.xib */,
-				38AE2D5A26528EB800CCA14B /* AddCourseCell.swift */,
-				38AE2D5B26528EB800CCA14B /* AddCourseCell.xib */,
-				38251FAF2653CB42003F0A99 /* ModalDelegate.swift */,
 			);
 			path = CourseTracker;
 			sourceTree = "<group>";
@@ -175,6 +156,46 @@
 				384299F6264978180040FFD2 /* Poppins-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		38EB04BA26663E8700053418 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				386FD63826454378006DE7A1 /* AllCoursesViewController.swift */,
+				386FD64326454E2B006DE7A1 /* AddCourseViewController.swift */,
+				386FD64026454CEF006DE7A1 /* LogProgressViewController.swift */,
+				38251FAF2653CB42003F0A99 /* ModalDelegate.swift */,
+				381040FC265FE83600ADAFCA /* EditCourseViewController.swift */,
+				386FD63C26454B13006DE7A1 /* CourseViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		38EB04BB26663EDD00053418 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				386FD62326453CC1006DE7A1 /* AppDelegate.swift */,
+				386FD62526453CC1006DE7A1 /* SceneDelegate.swift */,
+				386FD62E26453CC2006DE7A1 /* LaunchScreen.storyboard */,
+				386EE0C8265BC96700036CEE /* NamedSiteCell.xib */,
+				386EE0D2265BFF7600036CEE /* OtherSiteCell.xib */,
+				38AE2D562652758A00CCA14B /* CourseCell.xib */,
+				38AE2D5B26528EB800CCA14B /* AddCourseCell.xib */,
+				3845EA74265CEEC80017E5AF /* OtherSiteTextField.swift */,
+				386EE0DA265C051A00036CEE /* OtherSiteCell.swift */,
+				386EE0C7265BC96700036CEE /* NamedSiteCell.swift */,
+				38AE2D552652758A00CCA14B /* CourseCell.swift */,
+				38AE2D5A26528EB800CCA14B /* AddCourseCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		38EB04BD26663F3200053418 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38251FB22653DB66003F0A99 /* DataModel.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +298,6 @@
 				386FD64426454E2B006DE7A1 /* AddCourseViewController.swift in Sources */,
 				386FD64126454CEF006DE7A1 /* LogProgressViewController.swift in Sources */,
 				38AE2D572652758A00CCA14B /* CourseCell.swift in Sources */,
-				386EE0CD265BEF3600036CEE /* SelfSizedTableView.swift in Sources */,
 				386FD63D26454B13006DE7A1 /* CourseViewController.swift in Sources */,
 				386EE0C9265BC96700036CEE /* NamedSiteCell.swift in Sources */,
 				38251FB02653CB42003F0A99 /* ModalDelegate.swift in Sources */,

@@ -7,8 +7,9 @@
 
 import UIKit
 import CoreData
+import Charts
 
-class CourseViewController: UIViewController {
+class CourseViewController: UIViewController, ChartViewDelegate {
 
     // heading
     @IBOutlet weak var courseTitle: UILabel!
@@ -28,14 +29,37 @@ class CourseViewController: UIViewController {
     
     @IBOutlet weak var undoLogsButton: UIBarButtonItem!
     
+    @IBOutlet weak var graph: UIImageView!
+    
     var course:Course?
     
+    lazy var chart: PieChartView = {
+        let chart = PieChartView()
+        
+        return chart
+    }()
+    let chartColours = [UIColor(red: 0.95, green: 0.96, blue: 0.96, alpha: 1.00), UIColor(red: 0.33, green: 0.79, blue: 0.34, alpha: 1.00)]
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // initialise chart
+        graph.addSubview(chart)
+        chart.translatesAutoresizingMaskIntoConstraints = false
+        chart.centerXAnchor.constraint(equalTo: graph.centerXAnchor).isActive = true
+        chart.centerYAnchor.constraint(equalTo: graph.centerYAnchor).isActive = true
+        chart.heightAnchor.constraint(equalTo: graph.heightAnchor, multiplier: 1.0).isActive = true
+        let widthConstraint = NSLayoutConstraint(item: chart, attribute: .height, relatedBy: .equal, toItem: chart, attribute: .width, multiplier: 1, constant: 0)
+        NSLayoutConstraint.activate([widthConstraint])
+        chart.drawEntryLabelsEnabled = false
+        chart.holeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+        chart.legend.enabled = false
+        chart.drawSlicesUnderHoleEnabled = false
+        chart.transparentCircleRadiusPercent = 0
+        
         updateAll()
+        
     }
-  
+    
     @IBAction func tapURL(_ sender: UITapGestureRecognizer) {
         if let url = URL(string: (course?.website)!) {
             UIApplication.shared.open(url)
@@ -67,10 +91,24 @@ class CourseViewController: UIViewController {
         averageRatio.text = String(format: "%.3f", average)
         estimatedTimeRemaining.text = totalTimeTaken > 0 ? formatter.string(from: TimeInterval( Float((course!.duration - totalTimeCompleted)) / average ))! : courseLength.text
         timeCompleted.text = formatter.string(from: TimeInterval(totalTimeCompleted))!
-        let p = (Float(totalTimeCompleted) / Float(course!.duration)) * 100
+        var p = (Float(totalTimeCompleted) / Float(course!.duration)) * 100
+        if (p > 100) {
+            p = 100
+        }
         percentageCompleted.text = "\(String(format: "%.0f", p))%"
         
         undoLogsButton.isEnabled = (course!.logs!.count > 0)
+        
+        let dataEntries: [ChartDataEntry] = [
+            PieChartDataEntry(value: Double(100 - p), label: "", data: ""),
+            PieChartDataEntry(value: Double(p), label: "", data: "")
+        ]
+        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: nil)
+        pieChartDataSet.colors = chartColours
+        pieChartDataSet.drawValuesEnabled = false
+        pieChartDataSet.selectionShift = 0
+        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        chart.data = pieChartData
         
     }
     
@@ -140,27 +178,8 @@ class CourseViewController: UIViewController {
     }
     
     func deleteEntireCourse(action: UIAlertAction) {
-        
-//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//
-//        let fetchRequest: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LogItem")
-//        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-//
-//        do {
-//            try context.executeAndMergeChanges(using: batchDeleteRequest)
-//            navigationController?.popViewController(animated: true)
-//        } catch {
-//            print("Error saving context \(error)")
-//        }
-        
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext/*,
-            sortedItems = (course!.logs as! Set<LogItem>).sorted(by: { $0.date! < $1.date! })*/
-        
-//        if sortedItems.count > 0 {
-//            for i in 0...sortedItems.count - 1 {
-//                context.delete(sortedItems[i])
-//            }
-//        }
+
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         context.delete(course!)
         do {
             try context.save()
@@ -169,6 +188,11 @@ class CourseViewController: UIViewController {
             print("Error saving context \(error)")
         }
     }
+    
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        print(entry)
+    }
+   
 }
 
 extension CourseViewController: ModalDelegate {
@@ -181,18 +205,4 @@ extension CourseViewController: ModalDelegate {
         updateAll()
     }
     
-}
-
-extension NSManagedObjectContext {
-    
-    /// Executes the given `NSBatchDeleteRequest` and directly merges the changes to bring the given managed object context up to date.
-    ///
-    /// - Parameter batchDeleteRequest: The `NSBatchDeleteRequest` to execute.
-    /// - Throws: An error if anything went wrong executing the batch deletion.
-    public func executeAndMergeChanges(using batchDeleteRequest: NSBatchDeleteRequest) throws {
-        batchDeleteRequest.resultType = .resultTypeObjectIDs
-        let result = try execute(batchDeleteRequest) as? NSBatchDeleteResult
-        let changes: [AnyHashable: Any] = [NSDeletedObjectsKey: result?.result as? [NSManagedObjectID] ?? []]
-        NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes, into: [self])
-    }
 }

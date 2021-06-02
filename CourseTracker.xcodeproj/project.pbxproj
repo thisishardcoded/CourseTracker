@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,6 +46,7 @@
 		38AE2D582652758A00CCA14B /* CourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38AE2D562652758A00CCA14B /* CourseCell.xib */; };
 		38AE2D5C26528EB800CCA14B /* AddCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE2D5A26528EB800CCA14B /* AddCourseCell.swift */; };
 		38AE2D5D26528EB800CCA14B /* AddCourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38AE2D5B26528EB800CCA14B /* AddCourseCell.xib */; };
+		4435F5234113981F7BEC5238 /* Pods_CourseTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCBE9EC5B80C8E5209D8CEF /* Pods_CourseTracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,9 @@
 		38AE2D562652758A00CCA14B /* CourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCell.xib; sourceTree = "<group>"; };
 		38AE2D5A26528EB800CCA14B /* AddCourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseCell.swift; sourceTree = "<group>"; };
 		38AE2D5B26528EB800CCA14B /* AddCourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCourseCell.xib; sourceTree = "<group>"; };
+		3BCBE9EC5B80C8E5209D8CEF /* Pods_CourseTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CourseTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C39AC829F531F8C411F7EBD /* Pods-CourseTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CourseTracker.debug.xcconfig"; path = "Target Support Files/Pods-CourseTracker/Pods-CourseTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		B7FBABF9F49F6C5C284CAD8E /* Pods-CourseTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CourseTracker.release.xcconfig"; path = "Target Support Files/Pods-CourseTracker/Pods-CourseTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,17 +101,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4435F5234113981F7BEC5238 /* Pods_CourseTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BFFDCDD087F107D4698D34F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BCBE9EC5B80C8E5209D8CEF /* Pods_CourseTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		386FD61726453CC1006DE7A1 = {
 			isa = PBXGroup;
 			children = (
 				386FD62226453CC1006DE7A1 /* CourseTracker */,
 				386FD62126453CC1006DE7A1 /* Products */,
+				ECD9BFA19B3974F8673EB1F5 /* Pods */,
+				0BFFDCDD087F107D4698D34F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				38EB04BD26663F3200053418 /* Model */,
-				38EB04BB26663EDD00053418 /* Views */,
 				38EB04BA26663E8700053418 /* Controllers */,
 				38C729C126496D4E001CD797 /* Fonts */,
 				386FD62926453CC1006DE7A1 /* Main.storyboard */,
@@ -193,9 +207,19 @@
 		38EB04BD26663F3200053418 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				38EB04BB26663EDD00053418 /* Views */,
 				38251FB22653DB66003F0A99 /* DataModel.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ECD9BFA19B3974F8673EB1F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C39AC829F531F8C411F7EBD /* Pods-CourseTracker.debug.xcconfig */,
+				B7FBABF9F49F6C5C284CAD8E /* Pods-CourseTracker.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 386FD63426453CC2006DE7A1 /* Build configuration list for PBXNativeTarget "CourseTracker" */;
 			buildPhases = (
+				440F2295EABCDC4A564FF54B /* [CP] Check Pods Manifest.lock */,
 				386FD61C26453CC1006DE7A1 /* Sources */,
 				386FD61D26453CC1006DE7A1 /* Frameworks */,
 				386FD61E26453CC1006DE7A1 /* Resources */,
+				0FDE3F74CE803406F046DA3A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,6 +310,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FDE3F74CE803406F046DA3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CourseTracker/Pods-CourseTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CourseTracker/Pods-CourseTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CourseTracker/Pods-CourseTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		440F2295EABCDC4A564FF54B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CourseTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		386FD61C26453CC1006DE7A1 /* Sources */ = {
@@ -447,12 +515,14 @@
 		};
 		386FD63526453CC2006DE7A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C39AC829F531F8C411F7EBD /* Pods-CourseTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R8WY647AQD;
 				INFOPLIST_FILE = CourseTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,18 +530,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimharris.CourseTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		386FD63626453CC2006DE7A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7FBABF9F49F6C5C284CAD8E /* Pods-CourseTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R8WY647AQD;
 				INFOPLIST_FILE = CourseTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,7 +551,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimharris.CourseTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

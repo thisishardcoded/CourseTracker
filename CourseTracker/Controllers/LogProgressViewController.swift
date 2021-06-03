@@ -60,6 +60,7 @@ class LogProgressViewController: UIViewController {
             logItem.taken = totalSecondsTaken
             logItem.date = Date()
             logItem.parentCourse = course
+            
             do {
                 try context.save()
                 delegate.modalReturnsLogProgress!(true)

@@ -14,6 +14,7 @@ class CourseViewController: UIViewController, ChartViewDelegate {
     // heading
     @IBOutlet weak var courseTitle: UILabel!
     @IBOutlet weak var websiteSubtitle: UILabel!
+    var studyFactorText:String = ""
     
     // secondary stats
     @IBOutlet weak var courseLength: UILabel!
@@ -31,11 +32,11 @@ class CourseViewController: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var graph: UIImageView!
     
+    @IBOutlet weak var logProgressButton: UIBarButtonItem!
     var course:Course?
     
     lazy var chart: PieChartView = {
         let chart = PieChartView()
-        
         return chart
     }()
     let chartColours = [UIColor(red: 0.95, green: 0.96, blue: 0.96, alpha: 1.00), UIColor(red: 0.22, green: 0.66, blue: 0.80, alpha: 1.00)/*UIColor(red: 0.33, green: 0.79, blue: 0.34, alpha: 1.00)*/]
@@ -94,17 +95,21 @@ class CourseViewController: UIViewController, ChartViewDelegate {
         numFormatter.maximumFractionDigits = 2
         
         averageRatio.text = numFormatter.string(from: NSNumber(value: average))
+        let trueEstimate = Float((course!.duration - totalTimeCompleted)) / average
+        let estimate = trueEstimate < 0 ? 0 : trueEstimate
+       
+        estimatedTimeRemaining.text = totalTimeTaken > 0 ? timeFormatter.string(from: TimeInterval( estimate ))! : courseLength.text
         
-        estimatedTimeRemaining.text = totalTimeTaken > 0 ? timeFormatter.string(from: TimeInterval( Float((course!.duration - totalTimeCompleted)) / average ))! : courseLength.text
         timeCompleted.text = timeFormatter.string(from: TimeInterval(totalTimeCompleted))!
         var p = (Float(totalTimeCompleted) / Float(course!.duration)) * 100
-        if (p > 100) {
-            p = 100
-        }
+        logProgressButton.isEnabled = p < 100
         percentageCompleted.text = "\(String(format: "%.0f", p))%"
         
         undoLogsButton.isEnabled = (course!.logs!.count > 0)
         
+        if p > 100 {
+            p = 100
+        }
         let dataEntries: [ChartDataEntry] = [
             PieChartDataEntry(value: Double(100 - p), label: "", data: ""),
             PieChartDataEntry(value: Double(p), label: "", data: "")

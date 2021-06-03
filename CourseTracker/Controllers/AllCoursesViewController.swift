@@ -34,6 +34,7 @@ class AllCoursesViewController: UIViewController, UITableViewDataSource {
         image_view.center = CGPoint.init(x: titleView.center.x, y: titleView.center.y)
         titleView.addSubview(image_view)
         navigationItem.titleView = titleView
+
         loadCourses()
     }
     
@@ -70,16 +71,21 @@ extension AllCoursesViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
+        if coursesArray.count == 0 {
+            return tableView.dequeueReusableCell(withIdentifier: "AddCourseCell", for: indexPath) as! AddCourseCell
+        }
         if indexPath.row < coursesArray.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CourseCell", for: indexPath) as! CourseCell
             cell.courseTitle.text = coursesArray[indexPath.row].title
             cell.courseSubTitle.text = coursesArray[indexPath.row].website
             cell.courseLogo.image = UIImage(imageLiteralResourceName: coursesArray[indexPath.row].iconReference!)
             return cell
-        } else {
-            return tableView.dequeueReusableCell(withIdentifier: "AddCourseCell", for: indexPath) as! AddCourseCell
         }
+        let cell = UITableViewCell()
+        cell.isHidden = true
+        return cell
+         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

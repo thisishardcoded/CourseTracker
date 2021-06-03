@@ -45,7 +45,7 @@ class AddCourseViewController: UIViewController, UITableViewDelegate {
         Site("Udemy", "Udemy", "http://www.udemy.com", "UdemyLogo"),
         Site("Masterclass", "Masterclass", "http://www.masterclass.com", "MasterclassLogo"),
         Site("Lynda", "Lynda", "http://www.lynda.com", "LyndaLogo"),
-        Site("Other", "", "", "OtherLogo")
+        Site("Other", "", "", "onCourseIcon")
     ]
     
     var delegate: ModalDelegate?
@@ -231,5 +231,16 @@ extension AddCourseViewController:UITextFieldDelegate {
             }
         }
         saveAddCourse.isEnabled = formComplete
+        
+        var formErrors = false
+        if let h = Int(courseHours.text!), let m = Int(courseMinutes.text!) {
+            if h == 0 && m == 0 {
+                formErrors = true
+            }
+        }
+        if saveAddCourse.isEnabled {
+            saveAddCourse.isEnabled = formErrors == false
+        }
+        
     }
 }

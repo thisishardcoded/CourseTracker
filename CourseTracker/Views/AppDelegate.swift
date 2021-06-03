@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        if let poppinsRegular = UIFont(name: "Poppins Regular", size: 17) {
-            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: poppinsRegular], for: .normal)
-            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: poppinsRegular], for: .highlighted)
-            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: poppinsRegular], for: .disabled)
+        if let poppinsMedium = UIFont(name: "Poppins Medium", size: 17) {
+            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: poppinsMedium], for: .normal)
+            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: poppinsMedium], for: .highlighted)
+            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: poppinsMedium], for: .disabled)
         }
         
         return true

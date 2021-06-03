@@ -91,6 +91,16 @@ class EditCourseViewController: UIViewController {
             }
         }
         saveEditCourse.isEnabled = formComplete
+        
+        var formErrors = false
+        if let h = Int(hours.text!), let m = Int(minutes.text!) {
+            if h == 0 && m == 0 {
+                formErrors = true
+            }
+        }
+        if saveEditCourse.isEnabled {
+            saveEditCourse.isEnabled = formErrors == false
+        }
     }
     
 }

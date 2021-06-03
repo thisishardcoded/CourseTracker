@@ -46,6 +46,7 @@
 		38AE2D582652758A00CCA14B /* CourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38AE2D562652758A00CCA14B /* CourseCell.xib */; };
 		38AE2D5C26528EB800CCA14B /* AddCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE2D5A26528EB800CCA14B /* AddCourseCell.swift */; };
 		38AE2D5D26528EB800CCA14B /* AddCourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38AE2D5B26528EB800CCA14B /* AddCourseCell.xib */; };
+		38C171572668F219003E32C2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C171562668F219003E32C2 /* InfoViewController.swift */; };
 		4435F5234113981F7BEC5238 /* Pods_CourseTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCBE9EC5B80C8E5209D8CEF /* Pods_CourseTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		38AE2D562652758A00CCA14B /* CourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCell.xib; sourceTree = "<group>"; };
 		38AE2D5A26528EB800CCA14B /* AddCourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseCell.swift; sourceTree = "<group>"; };
 		38AE2D5B26528EB800CCA14B /* AddCourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCourseCell.xib; sourceTree = "<group>"; };
+		38C171562668F219003E32C2 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		3BCBE9EC5B80C8E5209D8CEF /* Pods_CourseTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CourseTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C39AC829F531F8C411F7EBD /* Pods-CourseTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CourseTracker.debug.xcconfig"; path = "Target Support Files/Pods-CourseTracker/Pods-CourseTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		B7FBABF9F49F6C5C284CAD8E /* Pods-CourseTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CourseTracker.release.xcconfig"; path = "Target Support Files/Pods-CourseTracker/Pods-CourseTracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				386EE0C7265BC96700036CEE /* NamedSiteCell.swift */,
 				38AE2D552652758A00CCA14B /* CourseCell.swift */,
 				38AE2D5A26528EB800CCA14B /* AddCourseCell.swift */,
+				38C171562668F219003E32C2 /* InfoViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				38AE2D5C26528EB800CCA14B /* AddCourseCell.swift in Sources */,
 				386EE0DB265C051A00036CEE /* OtherSiteCell.swift in Sources */,
 				38251FB42653DB66003F0A99 /* DataModel.xcdatamodeld in Sources */,
+				38C171572668F219003E32C2 /* InfoViewController.swift in Sources */,
 				386FD63926454378006DE7A1 /* AllCoursesViewController.swift in Sources */,
 				386FD64426454E2B006DE7A1 /* AddCourseViewController.swift in Sources */,
 				386FD64126454CEF006DE7A1 /* LogProgressViewController.swift in Sources */,

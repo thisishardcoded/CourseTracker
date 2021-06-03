@@ -71,12 +71,12 @@ class CourseViewController: UIViewController, ChartViewDelegate {
         courseTitle.text = course?.title
         websiteSubtitle.text = course?.website
         
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.hour, .minute]
-        formatter.unitsStyle = .abbreviated
-        formatter.zeroFormattingBehavior = .pad
+        let timeFormatter = DateComponentsFormatter()
+        timeFormatter.allowedUnits = [.hour, .minute]
+        timeFormatter.unitsStyle = .abbreviated
+        timeFormatter.zeroFormattingBehavior = .dropAll
            
-        courseLength.text = formatter.string(from: TimeInterval(course!.duration))!
+        courseLength.text = timeFormatter.string(from: TimeInterval(course!.duration))!
 
         let logs = course!.logs as! Set<LogItem>
         var totalTimeCompleted:Int32 = 0,
@@ -86,11 +86,17 @@ class CourseViewController: UIViewController, ChartViewDelegate {
             totalTimeTaken += log.taken
         }
         
-        timeSpent.text = formatter.string(from: TimeInterval(totalTimeTaken))!
+        timeSpent.text = timeFormatter.string(from: TimeInterval(totalTimeTaken))!
         let average = totalTimeTaken > 0 ? Float(totalTimeCompleted) / Float(totalTimeTaken) : 0
-        averageRatio.text = String(format: "%.3f", average)
-        estimatedTimeRemaining.text = totalTimeTaken > 0 ? formatter.string(from: TimeInterval( Float((course!.duration - totalTimeCompleted)) / average ))! : courseLength.text
-        timeCompleted.text = formatter.string(from: TimeInterval(totalTimeCompleted))!
+        
+        let numFormatter = NumberFormatter()
+        numFormatter.minimumFractionDigits = 0
+        numFormatter.maximumFractionDigits = 2
+        
+        averageRatio.text = numFormatter.string(from: NSNumber(value: average))
+        
+        estimatedTimeRemaining.text = totalTimeTaken > 0 ? timeFormatter.string(from: TimeInterval( Float((course!.duration - totalTimeCompleted)) / average ))! : courseLength.text
+        timeCompleted.text = timeFormatter.string(from: TimeInterval(totalTimeCompleted))!
         var p = (Float(totalTimeCompleted) / Float(course!.duration)) * 100
         if (p > 100) {
             p = 100
@@ -127,8 +133,8 @@ class CourseViewController: UIViewController, ChartViewDelegate {
     
     @IBAction func undoLastLogPressed(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Clear Most Recent", style: .default, handler: clearLastLog))
-        alert.addAction(UIAlertAction(title: "Clear All", style: .destructive, handler: clearAllLogs))
+        alert.addAction(UIAlertAction(title: "Clear Most Recent Log", style: .default, handler: clearLastLog))
+        alert.addAction(UIAlertAction(title: "Clear All Logs", style: .destructive, handler: clearAllLogs))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         
         // known bug fix
@@ -167,7 +173,7 @@ class CourseViewController: UIViewController, ChartViewDelegate {
     
     @IBAction func deleteCoursePressed(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Delete course", style: .destructive, handler: deleteEntireCourse))
+        alert.addAction(UIAlertAction(title: "Delete Course", style: .destructive, handler: deleteEntireCourse))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         
         // known bug fix

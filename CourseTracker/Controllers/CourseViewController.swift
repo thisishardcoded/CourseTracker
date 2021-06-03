@@ -38,7 +38,7 @@ class CourseViewController: UIViewController, ChartViewDelegate {
         
         return chart
     }()
-    let chartColours = [UIColor(red: 0.95, green: 0.96, blue: 0.96, alpha: 1.00), UIColor(red: 0.33, green: 0.79, blue: 0.34, alpha: 1.00)]
+    let chartColours = [UIColor(red: 0.95, green: 0.96, blue: 0.96, alpha: 1.00), UIColor(red: 0.22, green: 0.66, blue: 0.80, alpha: 1.00)/*UIColor(red: 0.33, green: 0.79, blue: 0.34, alpha: 1.00)*/]
    
     override func viewDidLoad() {
         super.viewDidLoad()

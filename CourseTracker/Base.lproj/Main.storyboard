@@ -12,9 +12,6 @@
         <array key="Poppins-Bold.ttf">
             <string>Poppins-Bold</string>
         </array>
-        <array key="Poppins-Medium.ttf">
-            <string>Poppins-Medium</string>
-        </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
@@ -264,7 +261,7 @@
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Complete iOS App Development Bootcamp" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nou-6p-gD9">
                                                         <rect key="frame" x="47" y="21" width="281" height="62"/>
-                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="45"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="45"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -293,13 +290,13 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="83.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total course length" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="G6B-JU-Km3">
-                                                                        <rect key="frame" x="20" y="10" width="147.5" height="15.5"/>
+                                                                        <rect key="frame" x="20" y="10" width="147.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="30"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0h 0m" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="sHy-CM-6K4">
-                                                                        <rect key="frame" x="20" y="25.5" width="147.5" height="35"/>
+                                                                        <rect key="frame" x="20" y="30.5" width="147.5" height="35"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="55"/>
                                                                         <color key="textColor" name="AppGrey"/>
                                                                         <nil key="highlightedColor"/>
@@ -309,7 +306,7 @@
                                                                     <constraint firstItem="sHy-CM-6K4" firstAttribute="top" secondItem="G6B-JU-Km3" secondAttribute="bottom" id="3hC-eD-qBI"/>
                                                                     <constraint firstItem="G6B-JU-Km3" firstAttribute="leading" secondItem="pQj-QX-oNE" secondAttribute="leading" constant="20" id="5GE-Q6-YkP"/>
                                                                     <constraint firstAttribute="trailing" secondItem="sHy-CM-6K4" secondAttribute="trailing" constant="20" id="NUN-52-g8l"/>
-                                                                    <constraint firstItem="G6B-JU-Km3" firstAttribute="height" secondItem="pQj-QX-oNE" secondAttribute="height" multiplier="0.189189" id="NzG-Pv-3l3"/>
+                                                                    <constraint firstItem="G6B-JU-Km3" firstAttribute="height" secondItem="pQj-QX-oNE" secondAttribute="height" multiplier="0.25" id="NzG-Pv-3l3"/>
                                                                     <constraint firstAttribute="trailing" secondItem="G6B-JU-Km3" secondAttribute="trailing" constant="20" id="Rza-fz-T51"/>
                                                                     <constraint firstItem="G6B-JU-Km3" firstAttribute="top" secondItem="pQj-QX-oNE" secondAttribute="top" constant="10" id="fjb-Ba-pDa"/>
                                                                     <constraint firstItem="sHy-CM-6K4" firstAttribute="height" secondItem="pQj-QX-oNE" secondAttribute="height" multiplier="0.416216" id="lGY-Ma-a90"/>
@@ -320,13 +317,13 @@
                                                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="83.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total time taken" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pUk-He-bKa">
-                                                                        <rect key="frame" x="20" y="10" width="147.5" height="15.5"/>
+                                                                        <rect key="frame" x="20" y="10" width="147.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="30"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0h 0m" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Awo-AC-A0G">
-                                                                        <rect key="frame" x="20" y="25.5" width="147.5" height="35"/>
+                                                                        <rect key="frame" x="20" y="30.5" width="147.5" height="35"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="55"/>
                                                                         <color key="textColor" name="AppGrey"/>
                                                                         <nil key="highlightedColor"/>
@@ -340,7 +337,7 @@
                                                                     <constraint firstItem="Awo-AC-A0G" firstAttribute="top" secondItem="pUk-He-bKa" secondAttribute="bottom" id="P5W-Z3-fIS"/>
                                                                     <constraint firstItem="Awo-AC-A0G" firstAttribute="height" secondItem="gbI-1R-9Zf" secondAttribute="height" multiplier="0.416216" id="Wl1-n5-oT1"/>
                                                                     <constraint firstItem="pUk-He-bKa" firstAttribute="top" secondItem="gbI-1R-9Zf" secondAttribute="top" constant="10" id="pQ9-wo-WBe"/>
-                                                                    <constraint firstItem="pUk-He-bKa" firstAttribute="height" secondItem="gbI-1R-9Zf" secondAttribute="height" multiplier="0.189189" id="pXP-lk-e7Y"/>
+                                                                    <constraint firstItem="pUk-He-bKa" firstAttribute="height" secondItem="gbI-1R-9Zf" secondAttribute="height" multiplier="0.25" id="pXP-lk-e7Y"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -908,7 +905,7 @@
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="AppGreen">
-            <color red="0.33300000429153442" green="0.79199999570846558" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.22400000691413879" green="0.66299998760223389" blue="0.79600000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppGrey">
             <color red="0.23499999940395355" green="0.23499999940395355" blue="0.2630000114440918" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>

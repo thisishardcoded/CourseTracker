@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onCourse" translatesAutoresizingMaskIntoConstraints="NO" id="GyH-0F-bzN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onCourseSharper" translatesAutoresizingMaskIntoConstraints="NO" id="GyH-0F-bzN">
                                 <rect key="frame" x="62" y="305.5" width="251" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GyH-0F-bzN" secondAttribute="height" multiplier="135:30" id="jqH-2x-nio"/>
@@ -44,6 +44,6 @@
     </scenes>
     <resources>
         <image name="dcj" width="279" height="20"/>
-        <image name="onCourse" width="187" height="49"/>
+        <image name="onCourseSharper" width="136" height="33"/>
     </resources>
 </document>

@@ -12,6 +12,9 @@
         <array key="Poppins-Bold.ttf">
             <string>Poppins-Bold</string>
         </array>
+        <array key="Poppins-LightItalic.ttf">
+            <string>Poppins-LightItalic</string>
+        </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
@@ -27,14 +30,115 @@
                     <view key="view" contentMode="scaleToFill" id="cxC-d2-Uo3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoq-2l-Es5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Plg-m2-h1o">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1219"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onCourseSharper" translatesAutoresizingMaskIntoConstraints="NO" id="Xg2-Oh-YvM">
+                                                <rect key="frame" x="15" y="15" width="345" height="33"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kac-ry-FmV">
+                                                <rect key="frame" x="15" y="68" width="345" height="28"/>
+                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9D-oz-ern">
+                                                <rect key="frame" x="15" y="116" width="345" height="167"/>
+                                                <string key="text">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem</string>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                <color key="textColor" name="AppGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IC5-5S-oRH">
+                                                <rect key="frame" x="15" y="303" width="345" height="28"/>
+                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCC-qn-fjj">
+                                                <rect key="frame" x="15" y="351" width="345" height="190.5"/>
+                                                <string key="text">Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? [33] At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores </string>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                <color key="textColor" name="AppGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVD-vO-DLx">
+                                                <rect key="frame" x="15" y="561.5" width="345" height="28"/>
+                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibl-eW-aOw">
+                                                <rect key="frame" x="15" y="609.5" width="345" height="214.5"/>
+                                                <string key="text">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</string>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                <color key="textColor" name="AppGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQy-Rj-vdR">
+                                                <rect key="frame" x="15" y="844" width="345" height="28"/>
+                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="REM-FV-rhZ">
+                                                <rect key="frame" x="15" y="892" width="345" height="61"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hourglass.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="g6m-8a-xFK">
+                                                        <rect key="frame" x="-2" y="1" width="34" height="61.5"/>
+                                                        <color key="tintColor" name="AppGreen"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="a9o-hX-klb"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="But I must explain to you how all this mistaken idea of reprobating pleasure and extolling pain arose" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qG2-mh-hC6">
+                                                        <rect key="frame" x="52" y="0.0" width="293" height="61"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="AppGrey"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.67000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zz-vp-7Qj">
+                                                <rect key="frame" x="15" y="973" width="345" height="231"/>
+                                                <string key="text">Store and/or access information on a device; Personalised ads display, personalised content, ad and content measurement, audience insights, and product development; Ensure security, prevent fraud, and debug; Technically deliver ads or content; Match and combine offline data sources; Link different devices; Receive and use automatically-sent device characteristics for identification; Use precise geolocation data; Actively scan device characteristics for identification.</string>
+                                                <fontDescription key="fontDescription" name="Poppins-LightItalic" family="Poppins" pointSize="15"/>
+                                                <color key="textColor" name="AppGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="15" leading="15" bottom="15" trailing="15"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Plg-m2-h1o" firstAttribute="leading" secondItem="GLX-Qa-TkZ" secondAttribute="leading" id="2UE-yy-Ha0"/>
+                                    <constraint firstItem="Plg-m2-h1o" firstAttribute="bottom" secondItem="GLX-Qa-TkZ" secondAttribute="bottom" id="Ebn-OH-aFL"/>
+                                    <constraint firstItem="Plg-m2-h1o" firstAttribute="trailing" secondItem="GLX-Qa-TkZ" secondAttribute="trailing" id="ElB-6m-qiM"/>
+                                    <constraint firstItem="Plg-m2-h1o" firstAttribute="top" secondItem="GLX-Qa-TkZ" secondAttribute="top" id="eng-em-ibf"/>
+                                    <constraint firstItem="Plg-m2-h1o" firstAttribute="width" secondItem="PfF-CT-oxK" secondAttribute="width" id="gef-zY-gHw"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="GLX-Qa-TkZ"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="PfF-CT-oxK"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FfY-Fq-dVY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qoq-2l-Es5" firstAttribute="trailing" secondItem="FfY-Fq-dVY" secondAttribute="trailing" id="KBa-lp-eLW"/>
+                            <constraint firstItem="qoq-2l-Es5" firstAttribute="leading" secondItem="FfY-Fq-dVY" secondAttribute="leading" id="OkX-MQ-B0z"/>
+                            <constraint firstItem="qoq-2l-Es5" firstAttribute="bottom" secondItem="FfY-Fq-dVY" secondAttribute="bottom" id="axO-55-JMm"/>
+                            <constraint firstItem="qoq-2l-Es5" firstAttribute="top" secondItem="FfY-Fq-dVY" secondAttribute="top" id="snJ-9l-NF9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ikR-1O-K9X"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Glx-iw-wcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="-636"/>
+            <point key="canvasLocation" x="182" y="-908"/>
         </scene>
         <!--Courses-->
         <scene sceneID="93l-90-Txs">
@@ -95,7 +199,7 @@
                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Add a Course" id="G4q-av-xPh">
+                                    <navigationItem title="Add Course" id="G4q-av-xPh">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="OpG-fc-rmp">
                                             <color key="tintColor" name="AppGreen"/>
                                             <connections>
@@ -732,7 +836,7 @@
                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Log Your Progress" id="aKg-gs-h4l">
+                                    <navigationItem title="Log Progress" id="aKg-gs-h4l">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="OqU-3x-f9m">
                                             <color key="tintColor" name="AppGreen"/>
                                             <connections>
@@ -925,6 +1029,7 @@
         <image name="arrow.uturn.left" catalog="system" width="128" height="112"/>
         <image name="hourglass.badge.plus" catalog="system" width="106" height="128"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="onCourseSharper" width="136" height="33"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="trash" catalog="system" width="121" height="128"/>

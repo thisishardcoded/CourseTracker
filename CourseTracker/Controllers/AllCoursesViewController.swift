@@ -26,11 +26,11 @@ class AllCoursesViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let rect:CGRect = CGRect.init(origin: CGPoint.init(x: 0, y: 0), size: CGSize.init(width: 156, height: 35))
+        let rect:CGRect = CGRect.init(origin: CGPoint.init(x: 0, y: 0), size: CGSize.init(width: 156, height: 30))
         let titleView:UIView = UIView.init(frame: rect)
-        let image:UIImage = UIImage.init(named: "onCourse")!
+        let image:UIImage = UIImage.init(named: "onCourseSharper")!
         let image_view:UIImageView = UIImageView.init(image: image)
-        image_view.frame = CGRect.init(x: 0, y: 0, width: 156, height: 35)
+        image_view.frame = CGRect.init(x: 0, y: 0, width: 156, height: 30)
         image_view.center = CGPoint.init(x: titleView.center.x, y: titleView.center.y)
         titleView.addSubview(image_view)
         navigationItem.titleView = titleView

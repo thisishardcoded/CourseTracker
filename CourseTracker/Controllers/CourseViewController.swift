@@ -71,7 +71,7 @@ class CourseViewController: UIViewController, ChartViewDelegate {
         
         courseTitle.text = course?.title
         websiteSubtitle.text = course?.website
-        
+      
         let timeFormatter = DateComponentsFormatter()
         timeFormatter.allowedUnits = [.hour, .minute]
         timeFormatter.unitsStyle = .abbreviated

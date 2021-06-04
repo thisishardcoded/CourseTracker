@@ -43,8 +43,10 @@ class AddCourseViewController: UIViewController, UITableViewDelegate {
     
     private var sites:[Site] = [
         Site("Udemy", "Udemy", "http://www.udemy.com", "UdemyLogo"),
-        Site("Masterclass", "Masterclass", "http://www.masterclass.com", "MasterclassLogo"),
-        Site("Lynda", "Lynda", "http://www.lynda.com", "LyndaLogo"),
+        Site("Coursera", "Coursera", "https://www.coursera.org", "courseraLogo"),
+        Site("LinkedIn Learning", "LinkedIn Learning", "https://www.linkedin.com/learning", "linkedInLearning"),
+        Site("edX", "edX", "https://www.edx.org", "edxLogo"),
+        Site("Code Academy", "Code Academy", "https://www.codecademy.com", "codeAcademyLogo"),
         Site("Other", "", "", "onCourseIcon")
     ]
     

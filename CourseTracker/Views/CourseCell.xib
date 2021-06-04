@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -33,6 +32,7 @@
                         <rect key="frame" x="10" y="10" width="45" height="45"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="i46-zk-dqm" secondAttribute="height" multiplier="1:1" id="IVr-I6-yYv"/>
+                            <constraint firstAttribute="height" constant="45" id="j9u-hx-H9m"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="D5a-lo-Tid">
@@ -91,7 +91,7 @@
         <image name="WithSeparator" width="375" height="60"/>
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <namedColor name="AppGrey">
-            <color red="0.23499999940395355" green="0.23499999940395355" blue="0.2630000114440918" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23499999940395355" green="0.23499999940395355" blue="0.2630000114440918" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

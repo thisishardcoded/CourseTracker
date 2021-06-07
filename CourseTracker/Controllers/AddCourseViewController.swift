@@ -88,21 +88,21 @@ class AddCourseViewController: UIViewController, UITableViewDelegate {
     }
     
     @IBAction func saveAddCourse(_ sender: UIBarButtonItem) {
-        if let delegate = self.delegate {
+        if let delegate = self.delegate, let site = selectedSite {
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext,
                 totalSecondsDuration = (Int32(courseMinutes.text!)! + Int32(courseHours.text!)! * 60) * 60,
                 course = Course(context: context)
             course.duration = totalSecondsDuration
             course.title = courseTitle.text
-            course.iconReference = selectedSite?.icon
-            course.website = selectedSite?.url
+            course.iconReference = site.icon
+            course.website = site.url
             course.date = Date()
             do {
                 try context.save()
                 delegate.modalReturnsAddCourse!(true)
                 self.dismiss(animated: true, completion: nil)
             } catch {
-                print("Error saving context \(error)")
+                print("Error saving context saveAddCourse \(error)")
             }
        }
     }
@@ -204,7 +204,7 @@ extension AddCourseViewController:UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField is OtherSiteTextField && textField.text!.isEmpty && selectedCell is OtherSiteCell {
-            selectedCell!.accessoryType = UITableViewCell.AccessoryType.none
+            selectedCell?.accessoryType = UITableViewCell.AccessoryType.none
             selectedCell = nil
         }
     }

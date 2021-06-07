@@ -17,7 +17,8 @@ class AllCoursesViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
+        //print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         allCourses.dataSource = self
         allCourses.delegate = self
         allCourses.register(UINib(nibName: "CourseCell", bundle: nil), forCellReuseIdentifier: "CourseCell")
@@ -26,6 +27,8 @@ class AllCoursesViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        //  custom logo in titleview
         let rect:CGRect = CGRect.init(origin: CGPoint.init(x: 0, y: 0), size: CGSize.init(width: 156, height: 30))
         let titleView:UIView = UIView.init(frame: rect)
         let image:UIImage = UIImage.init(named: "onCourseSharper")!
@@ -34,7 +37,8 @@ class AllCoursesViewController: UIViewController, UITableViewDataSource {
         image_view.center = CGPoint.init(x: titleView.center.x, y: titleView.center.y)
         titleView.addSubview(image_view)
         navigationItem.titleView = titleView
-
+        
+        // initialise
         loadCourses()
     }
     
@@ -46,7 +50,7 @@ class AllCoursesViewController: UIViewController, UITableViewDataSource {
         do {
             coursesArray = try context.fetch(request)
         } catch {
-            print("Error loading context \(error)")
+            print("Error loading context for loadCourses \(error)")
         }
         allCourses.reloadData()
     }
@@ -61,7 +65,6 @@ class AllCoursesViewController: UIViewController, UITableViewDataSource {
             vc.course = coursesArray[selectedCourseIndex!]
         }
     }
-    
 }
 
 extension AllCoursesViewController: UITableViewDelegate {

@@ -40,8 +40,6 @@ class EditCourseViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardShown(keyboardShowNotification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardHidden(keyboardDidHideNotification:)), name: UIResponder.keyboardDidHideNotification, object: nil)
         checkSaveEnabledConditions()
-        //courseTitle
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -75,7 +73,7 @@ class EditCourseViewController: UIViewController {
                 delegate.modalReturnsEditCourse!(true)
                 self.dismiss(animated: true, completion: nil)
             } catch {
-                print("Error saving context \(error)")
+                print("Error saving context saveEditCourse \(error)")
             }
         }
         // self.dismiss(animated: true, completion: nil)

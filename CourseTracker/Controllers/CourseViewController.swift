@@ -39,10 +39,11 @@ class CourseViewController: UIViewController, ChartViewDelegate {
         let chart = PieChartView()
         return chart
     }()
-    let chartColours = [UIColor(red: 0.95, green: 0.96, blue: 0.96, alpha: 1.00), UIColor(red: 0.22, green: 0.66, blue: 0.80, alpha: 1.00)/*UIColor(red: 0.33, green: 0.79, blue: 0.34, alpha: 1.00)*/]
+    let chartColours = [UIColor(red: 0.95, green: 0.96, blue: 0.96, alpha: 1.00), UIColor(red: 0.22, green: 0.66, blue: 0.80, alpha: 1.00)]
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // initialise chart
         graph.addSubview(chart)
         chart.translatesAutoresizingMaskIntoConstraints = false
@@ -57,6 +58,7 @@ class CourseViewController: UIViewController, ChartViewDelegate {
         chart.drawSlicesUnderHoleEnabled = false
         chart.transparentCircleRadiusPercent = 0
         
+        // initialise
         updateAll()
         
     }
@@ -127,12 +129,12 @@ class CourseViewController: UIViewController, ChartViewDelegate {
         if segue.identifier == "logProgressView" {
             let vc = segue.destination as! LogProgressViewController
             vc.delegate = self
-            vc.course = course!
+            vc.course = course
         }
         if segue.identifier == "editCourseView" {
             let vc = segue.destination as! EditCourseViewController
             vc.delegate = self
-            vc.course = course!
+            vc.course = course
         }
     }
     
@@ -157,14 +159,13 @@ class CourseViewController: UIViewController, ChartViewDelegate {
             try context.save()
             updateAll()
         } catch {
-            print("Error saving context \(error)")
+            print("Error saving context clearLastLog \(error)")
         }
     }
     
     func clearAllLogs(action: UIAlertAction) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext,
             sortedItems = (course!.logs as! Set<LogItem>).sorted(by: { $0.date! < $1.date! })
-        // BETTER ???
         for i in 0...sortedItems.count - 1 {
             context.delete(sortedItems[i])
         }
@@ -172,7 +173,7 @@ class CourseViewController: UIViewController, ChartViewDelegate {
             try context.save()
             updateAll()
         } catch {
-            print("Error saving context \(error)")
+            print("Error saving context clearAllLogs \(error)")
         }
     }
     
@@ -196,7 +197,7 @@ class CourseViewController: UIViewController, ChartViewDelegate {
             try context.save()
             navigationController?.popViewController(animated: true)
         } catch {
-            print("Error saving context \(error)")
+            print("Error saving context deleteEntireCourse \(error)")
         }
     }
     

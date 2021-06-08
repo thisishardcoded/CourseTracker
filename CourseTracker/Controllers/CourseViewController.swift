@@ -118,6 +118,7 @@ class CourseViewController: UIViewController, ChartViewDelegate {
         ]
         let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: nil)
         pieChartDataSet.colors = chartColours
+        
         pieChartDataSet.drawValuesEnabled = false
         pieChartDataSet.selectionShift = 0
         let pieChartData = PieChartData(dataSet: pieChartDataSet)
@@ -143,6 +144,7 @@ class CourseViewController: UIViewController, ChartViewDelegate {
         alert.addAction(UIAlertAction(title: "Clear most recent log", style: .default, handler: clearLastLog))
         alert.addAction(UIAlertAction(title: "Clear all logs", style: .destructive, handler: clearAllLogs))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.view.tintColor = UIColor(named: "AppGreen")
         
         // known bug fix
         if let constraints = alert.view?.subviews.first?.constraints { for constraint in constraints { if constraint.constant < 0 { constraint.priority = UILayoutPriority(rawValue: constraint.priority.rawValue - 1) } } }
@@ -178,9 +180,10 @@ class CourseViewController: UIViewController, ChartViewDelegate {
     }
     
     @IBAction func deleteCoursePressed(_ sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: nil, message: "This cannot be undone", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Delete course", style: .destructive, handler: deleteEntireCourse))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.view.tintColor = UIColor(named: "AppGreen")
         
         // known bug fix
         if let constraints = alert.view?.subviews.first?.constraints { for constraint in constraints { if constraint.constant < 0 { constraint.priority = UILayoutPriority(rawValue: constraint.priority.rawValue - 1) } } }

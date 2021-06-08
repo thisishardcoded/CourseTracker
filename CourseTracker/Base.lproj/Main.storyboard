@@ -35,76 +35,223 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Plg-m2-h1o">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1026.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="3539"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onCourseSharper" translatesAutoresizingMaskIntoConstraints="NO" id="Xg2-Oh-YvM">
                                                 <rect key="frame" x="15" y="15" width="345" height="33"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kac-ry-FmV">
-                                                <rect key="frame" x="15" y="68" width="345" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9D-oz-ern">
+                                                <rect key="frame" x="15" y="68" width="345" height="224"/>
+                                                <string key="text">Track your progress with your online courses and get an estimate of the time needed to finish your studies. Knowing how much time you need helps you plan your studies, and tracking your progress keeps you accountable.</string>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="24"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9D-oz-ern">
-                                                <rect key="frame" x="15" y="111.5" width="345" height="119"/>
-                                                <string key="text">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem</string>
-                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCC-qn-fjj">
+                                                <rect key="frame" x="15" y="312" width="345" height="116.5"/>
+                                                <string key="text">For example, if a course is ten hours long and it’s taking you two hours to get through one hour of the course, then you will need twenty hours to complete the course.</string>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                 <color key="textColor" name="AppGrey"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IC5-5S-oRH">
-                                                <rect key="frame" x="15" y="250.5" width="345" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCC-qn-fjj">
-                                                <rect key="frame" x="15" y="294" width="345" height="158.5"/>
-                                                <string key="text">Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? [33] At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores </string>
-                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d01-ea-5fO">
+                                                <rect key="frame" x="15" y="448.5" width="345" height="210"/>
+                                                <string key="text">As you track your progress this estimate will change. Perhaps the course gets easier towards the end and you only need an hour and a half to complete one hour, or it gets harder and you need three hours to complete one hour. These changes will be reflected in the estimated time remaining.</string>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                 <color key="textColor" name="AppGrey"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVD-vO-DLx">
-                                                <rect key="frame" x="15" y="472.5" width="345" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homepage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVD-vO-DLx">
+                                                <rect key="frame" x="15" y="678.5" width="345" height="26"/>
+                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibl-eW-aOw">
-                                                <rect key="frame" x="15" y="516" width="345" height="158.5"/>
-                                                <string key="text">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</string>
-                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
-                                                <color key="textColor" name="AppGrey"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQy-Rj-vdR">
-                                                <rect key="frame" x="15" y="694.5" width="345" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="REM-FV-rhZ">
-                                                <rect key="frame" x="15" y="738" width="345" height="61"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wQe-m1-Ma1">
+                                                <rect key="frame" x="15" y="724.5" width="345" height="47"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hourglass.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="g6m-8a-xFK">
-                                                        <rect key="frame" x="-2" y="1" width="34" height="61.5"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Bcf-mx-ehz">
+                                                        <rect key="frame" x="0.0" y="0.5" width="32" height="46"/>
                                                         <color key="tintColor" name="AppGreen"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="32" id="a9o-hX-klb"/>
+                                                            <constraint firstAttribute="width" constant="32" id="ewk-fP-eNW"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="But I must explain to you how all this mistaken idea of reprobating pleasure and extolling pain arose" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qG2-mh-hC6">
-                                                        <rect key="frame" x="52" y="0.0" width="293" height="61"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" name="AppGrey"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the plus icon to begin tracking a course" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3h-VP-D8Y">
+                                                        <rect key="frame" x="52" y="0.0" width="293" height="47"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                        <color key="textColor" name="AppGreen"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.67000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zz-vp-7Qj">
-                                                <rect key="frame" x="15" y="819" width="345" height="192.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibl-eW-aOw">
+                                                <rect key="frame" x="15" y="791.5" width="345" height="350"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">The homepage lists all the courses you’re tracking. Use the plus icon in the navigation bar, or the Add a course to begin prompt (when available), to begin tracking a new course. Fill out the form in the pop-up that appears with the course title, the website where it’s hosted and the length of the course in hours and minutes. Some of the most popular sites with their logos are included or you can enter your own. Tap save to dismiss the pop-up and you will see your newly created course listed at the top of the homepage</string>
+                                                        <attributes>
+                                                            <color key="NSColor" name="AppGrey"/>
+                                                            <font key="NSFont" size="20" name="Poppins-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course view" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3od-BE-l6E">
+                                                <rect key="frame" x="15" y="1161.5" width="345" height="26"/>
+                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyf-oC-w2j">
+                                                <rect key="frame" x="15" y="1207.5" width="345" height="256.5"/>
+                                                <string key="text">From the list of courses shown on the homepage, tap on a course to navigate to the course view and see its details. The course view is split into four areas. The first area at the top shows the course title and website, if available. You can tap on this to open it in Safari. The area below that shows the length of the course and the time you’ve spent on it so far; in hours and minutes.</string>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                <color key="textColor" name="AppGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ece-yf-RRs">
+                                                <rect key="frame" x="15" y="1484" width="345" height="163.5"/>
+                                                <string key="text">The large area in the centre shows how much of the course you’ve completed: as a percentage, in hours and minutes, and as a pie chart. The final area at the bottom shows your current study score and the estimated study time remaining.</string>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                <color key="textColor" name="AppGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your study score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQy-Rj-vdR">
+                                                <rect key="frame" x="15" y="1667.5" width="345" height="26"/>
+                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Div-dc-ClD">
+                                                <rect key="frame" x="15" y="1713.5" width="345" height="280"/>
+                                                <string key="text">The estimated study time remaining is based on the amount of the course you’ve completed and how long it’s taken you. Your current study score is calculated from this. The closer this is to 1, the better you are performing on the course. If it’s taking you one hour to complete one hour of the course then you will have a study score of 1. If it’s taking you two hours to complete one hour of the course then you will have a study score of 0.5.</string>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                <color key="textColor" name="AppGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yq-SD-QuZ">
+                                                <rect key="frame" x="15" y="2013.5" width="345" height="163.5"/>
+                                                <string key="text">You might like to use this number as a target to maintain your progress through your courses at a certain rate. Your current study score is an average across all the logs you’ve made of your progress, so track your progress often.</string>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                <color key="textColor" name="AppGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From the navigation bar of the course view page you can delete the course, edit the course details and track your progress." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4q-L9-yuF">
+                                                <rect key="frame" x="15" y="2197" width="345" height="93.5"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                <color key="textColor" name="AppGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S4j-Oc-sfr">
+                                                <rect key="frame" x="15" y="2310.5" width="345" height="47"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hourglass.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="w1o-Qx-XjB">
+                                                        <rect key="frame" x="-2" y="1" width="34" height="47.5"/>
+                                                        <color key="tintColor" name="AppGreen"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="YrU-wR-4xX"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the hourglass icon to track your progress" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDy-np-xTD">
+                                                        <rect key="frame" x="52" y="0.0" width="293" height="47"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                        <color key="textColor" name="AppGreen"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLy-ky-BrV">
+                                                <rect key="frame" x="15" y="2377.5" width="345" height="233"/>
+                                                <string key="text">A pop-up appears where you can log the time you spent studying and how much of the course you completed in that time. For example, if you sat down for the afternoon to study and it took you a couple of hours to get through forty five minutes of the course, you’d enter 2 hours 0 minutes for Time spent and 0 hours 45 minutes for Amount of course completed.</string>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                <color key="textColor" name="AppGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA4-pd-8pH">
+                                                <rect key="frame" x="15" y="2630.5" width="345" height="116.5"/>
+                                                <string key="text">The more often you track your progress, the more accurate an estimate can be made of the time remaining to complete a course, so track your progress often.</string>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                <color key="textColor" name="AppGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hUB-Uo-wXY">
+                                                <rect key="frame" x="15" y="2767" width="345" height="47"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.uturn.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fWf-zH-kJ3">
+                                                        <rect key="frame" x="0.0" y="2" width="32" height="44.5"/>
+                                                        <color key="tintColor" name="AppGreen"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="e5r-vA-tL9"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the undo icon to manage your logs" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veC-5s-Wdj">
+                                                        <rect key="frame" x="52" y="0.0" width="293" height="47"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                        <color key="textColor" name="AppGreen"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the undo icon to remove either the last log you made of your progress, or all the logs you’ve made so far." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i84-eL-vav">
+                                                <rect key="frame" x="15" y="2834" width="345" height="70"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                <color key="textColor" name="AppGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hdD-Df-xgB">
+                                                <rect key="frame" x="15" y="2924" width="345" height="47"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="H1g-xA-MkV">
+                                                        <rect key="frame" x="0.0" y="-1" width="32" height="47.5"/>
+                                                        <color key="tintColor" name="AppGreen"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="EzD-Ls-jNx"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the trashcan to delete the course" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wY9-Ht-9tv">
+                                                        <rect key="frame" x="52" y="0.0" width="293" height="47"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                        <color key="textColor" name="AppGreen"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be asked to confirm this as it cannot be undone. You will be returned to the homepage once the course is deleted." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXx-c2-OHV">
+                                                <rect key="frame" x="15" y="2991" width="345" height="93.5"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                <color key="textColor" name="AppGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="r02-At-BJl">
+                                                <rect key="frame" x="15" y="3104.5" width="345" height="47"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NEp-RF-yH3">
+                                                        <rect key="frame" x="0.0" y="2.5" width="32" height="42.5"/>
+                                                        <color key="tintColor" name="AppGreen"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="3Fx-ze-opJ"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the pencil icon to edit the course" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8in-nP-OxB">
+                                                        <rect key="frame" x="52" y="0.0" width="293" height="47"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                        <color key="textColor" name="AppGreen"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOC-Fr-SHQ">
+                                                <rect key="frame" x="15" y="3171.5" width="345" height="140"/>
+                                                <string key="text">Tap the pencil icon to edit the course title or course length. You might decide to not study some sections of a course, reducing the course length, for example, and you might change the title to reflect this.</string>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                <color key="textColor" name="AppGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.67000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zz-vp-7Qj">
+                                                <rect key="frame" x="15" y="3331.5" width="345" height="192.5"/>
                                                 <string key="text">Store and/or access information on a device; Personalised ads display, personalised content, ad and content measurement, audience insights, and product development; Ensure security, prevent fraud, and debug; Technically deliver ads or content; Match and combine offline data sources; Link different devices; Receive and use automatically-sent device characteristics for identification; Use precise geolocation data; Actively scan device characteristics for identification.</string>
                                                 <fontDescription key="fontDescription" name="Poppins-LightItalic" family="Poppins" pointSize="15"/>
                                                 <color key="textColor" name="AppGrey"/>
@@ -138,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Glx-iw-wcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="182" y="-908"/>
+            <point key="canvasLocation" x="2470" y="-631"/>
         </scene>
         <!--Courses-->
         <scene sceneID="93l-90-Txs">
@@ -234,30 +381,12 @@
                                                         <rect key="frame" x="0.0" y="30" width="345" height="34"/>
                                                         <color key="backgroundColor" name="AppLightBlue"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IcN-Qv-WVJ" userLabel="Website form">
-                                                <rect key="frame" x="15" y="84" width="345" height="206"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkw-Zc-OAn" userLabel="Website label">
-                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
-                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SCS-Nd-P2V">
-                                                        <rect key="frame" x="0.0" y="30" width="345" height="176"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="176" id="dNw-iP-JjX"/>
-                                                        </constraints>
-                                                    </tableView>
-                                                </subviews>
-                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wCd-nk-PNe" userLabel="Duration form">
-                                                <rect key="frame" x="15" y="310" width="345" height="64"/>
+                                                <rect key="frame" x="15" y="84" width="345" height="64"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vc7-Xw-oF1" userLabel="Duration label">
                                                         <rect key="frame" x="0.0" y="0.0" width="106.5" height="20"/>
@@ -310,6 +439,24 @@
                                                     <constraint firstItem="ZF3-yw-nd1" firstAttribute="leading" secondItem="wCd-nk-PNe" secondAttribute="leading" id="VzM-rN-iG8"/>
                                                 </constraints>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IcN-Qv-WVJ" userLabel="Website form">
+                                                <rect key="frame" x="15" y="168" width="345" height="206"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkw-Zc-OAn" userLabel="Website label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SCS-Nd-P2V">
+                                                        <rect key="frame" x="0.0" y="30" width="345" height="176"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="176" id="dNw-iP-JjX"/>
+                                                        </constraints>
+                                                    </tableView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="15" bottom="15" trailing="15"/>
                                     </stackView>
@@ -338,11 +485,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="allScrollView" destination="809-ex-KkO" id="fec-js-YRn"/>
                         <outlet property="courseHours" destination="gym-Cx-YKA" id="qPd-ou-wZK"/>
                         <outlet property="courseMinutes" destination="hwi-tg-JbY" id="6Ke-fw-Dw9"/>
                         <outlet property="courseTitle" destination="XsI-CD-Coj" id="KoV-9E-IcE"/>
                         <outlet property="saveAddCourse" destination="6n9-Tk-ju9" id="xtr-kE-B6P"/>
-                        <outlet property="scrollViewBottomConstraint" destination="bvu-Kk-Ddz" id="GbT-2D-pnw"/>
                         <outlet property="tableHeight" destination="dNw-iP-JjX" id="gfe-Rg-9xR"/>
                         <outlet property="websiteList" destination="SCS-Nd-P2V" id="dUy-Un-hc7"/>
                     </connections>
@@ -368,7 +515,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pYE-SV-03C" userLabel="First Sub View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="218"/>
                                         <subviews>
-                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsB-iG-csU" userLabel="Title">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsB-iG-csU" userLabel="Title">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WithSeparator" translatesAutoresizingMaskIntoConstraints="NO" id="5HC-4U-eHR">
@@ -387,8 +534,9 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Complete iOS App Development Bootcamp" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nou-6p-gD9">
                                                         <rect key="frame" x="47" y="21" width="281" height="62"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="45"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" name="AppGreen"/>
                                                         <nil key="highlightedColor"/>
+                                                        <size key="shadowOffset" width="0.0" height="0.0"/>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
@@ -405,13 +553,13 @@
                                                     <constraint firstItem="T82-MC-YnN" firstAttribute="height" secondItem="rsB-iG-csU" secondAttribute="height" multiplier="0.15" id="oa7-dd-Bco"/>
                                                 </constraints>
                                             </view>
-                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iup-hC-JM5" userLabel="Secondary stats">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iup-hC-JM5" userLabel="Secondary stats">
                                                 <rect key="frame" x="0.0" y="124.5" width="375" height="93.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="s4G-13-Czc" userLabel="Secondary stats columns">
                                                         <rect key="frame" x="0.0" y="5" width="375" height="83.5"/>
                                                         <subviews>
-                                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQj-QX-oNE" userLabel="Left column">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQj-QX-oNE" userLabel="Left column">
                                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="83.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course length" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="G6B-JU-Km3">
@@ -438,7 +586,7 @@
                                                                     <constraint firstItem="sHy-CM-6K4" firstAttribute="leading" secondItem="pQj-QX-oNE" secondAttribute="leading" constant="20" id="sVv-kt-fQO"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbI-1R-9Zf" userLabel="Right column">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbI-1R-9Zf" userLabel="Right column">
                                                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="83.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time you've taken" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pUk-He-bKa">
@@ -496,7 +644,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FUg-bx-K5y" userLabel="Second Sub View">
                                         <rect key="frame" x="0.0" y="218" width="375" height="405"/>
                                         <subviews>
-                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ju6-hE-USs" userLabel="Graph">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ju6-hE-USs" userLabel="Graph">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="xRP-wk-YB3">
@@ -504,6 +652,7 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="75"/>
                                                         <color key="textColor" name="AppGreen"/>
                                                         <nil key="highlightedColor"/>
+                                                        <size key="shadowOffset" width="0.0" height="0.0"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="XQv-YE-Ebc">
                                                         <rect key="frame" x="0.0" y="110.5" width="375" height="19"/>
@@ -538,7 +687,7 @@
                                                     <constraint firstItem="XQv-YE-Ebc" firstAttribute="width" secondItem="Ju6-hE-USs" secondAttribute="width" id="sUC-P7-Lsd"/>
                                                 </constraints>
                                             </view>
-                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Tc-Og-zbi" userLabel="Primary stats">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Tc-Og-zbi" userLabel="Primary stats">
                                                 <rect key="frame" x="0.0" y="251" width="375" height="154"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0h 0m" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Nb-2a-B5G">
@@ -546,6 +695,7 @@
                                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="130"/>
                                                         <color key="textColor" name="AppGreen"/>
                                                         <nil key="highlightedColor"/>
+                                                        <size key="shadowOffset" width="0.0" height="0.0"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated study time remaining" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="8xt-hb-f7w">
                                                         <rect key="frame" x="20" y="68" width="335" height="20"/>
@@ -559,7 +709,7 @@
                                                         <color key="textColor" name="AppGrey"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current study factor" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="8ew-At-9Ic">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current study score" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="8ew-At-9Ic">
                                                         <rect key="frame" x="20" y="4" width="335" height="20"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="30"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -725,7 +875,7 @@
                                                         <rect key="frame" x="0.0" y="30" width="345" height="34"/>
                                                         <color key="backgroundColor" name="AppLightBlue"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -811,11 +961,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="allScrollView" destination="VlY-Ul-VWX" id="1vv-LY-jAw"/>
                         <outlet property="courseTitle" destination="90f-6S-s4B" id="kPv-2Q-V2M"/>
                         <outlet property="hours" destination="hqt-75-QOi" id="PwX-OV-kib"/>
                         <outlet property="minutes" destination="1Hu-Id-na4" id="AKE-v9-Szu"/>
                         <outlet property="saveEditCourse" destination="BL1-wf-Cso" id="fgH-Vj-Wxj"/>
-                        <outlet property="scrollViewBottom" destination="Ti1-yo-cCJ" id="jEi-mL-5uE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3OB-sI-aKR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -836,7 +986,7 @@
                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Log Progress" id="aKg-gs-h4l">
+                                    <navigationItem title="Track Progress" id="aKg-gs-h4l">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="OqU-3x-f9m">
                                             <color key="tintColor" name="AppGreen"/>
                                             <connections>
@@ -987,12 +1137,12 @@
                     </view>
                     <connections>
                         <outlet property="allForms" destination="tkw-g4-qub" id="wmR-GM-uUt"/>
+                        <outlet property="allScrollView" destination="U7x-sI-FiQ" id="WJh-3L-9EL"/>
                         <outlet property="hoursCompleted" destination="gpc-VS-lsP" id="o45-hi-PxB"/>
                         <outlet property="hoursTaken" destination="jnk-go-Hv8" id="TAE-bu-ff6"/>
                         <outlet property="minutesCompleted" destination="v8r-Sk-Yds" id="qMa-nE-qE9"/>
                         <outlet property="minutesTaken" destination="Thp-sx-Roh" id="RXK-yP-Urp"/>
                         <outlet property="saveLogProgress" destination="8q7-w8-MoS" id="E6U-kG-4FB"/>
-                        <outlet property="scrollViewBottom" destination="82I-iP-210" id="93i-ze-ajG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hh6-4j-7ES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

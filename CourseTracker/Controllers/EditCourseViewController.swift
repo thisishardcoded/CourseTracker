@@ -16,8 +16,7 @@ class EditCourseViewController: UIViewController {
     @IBOutlet weak var hours: UITextField!
     @IBOutlet weak var minutes: UITextField!
     @IBOutlet weak var saveEditCourse: UIBarButtonItem!
-    
-    @IBOutlet weak var scrollViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var allScrollView: UIScrollView!
     
     var requiredFields:[UITextField] = []
     
@@ -49,13 +48,16 @@ class EditCourseViewController: UIViewController {
 
     @objc private func keyboardShown(keyboardShowNotification notification: Notification) {
         if let userInfo = notification.userInfo {
-            let keyboardHeight = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue.size.height
-            scrollViewBottom.constant = -keyboardHeight
+            let keyboardHeight = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size.height
+            let contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardHeight, right: 0.0)
+            allScrollView.contentInset = contentInset
+            allScrollView.scrollIndicatorInsets = contentInset
         }
     }
-
+    
     @objc private func keyboardHidden(keyboardDidHideNotification notification: Notification) {
-        scrollViewBottom.constant = 0
+        allScrollView.contentInset = UIEdgeInsets.zero
+        allScrollView.scrollIndicatorInsets = UIEdgeInsets.zero
     }
     
     @IBAction func cancelEditCourse(_ sender: UIBarButtonItem) {

@@ -33,7 +33,7 @@
                         <rect key="frame" x="38" y="6" width="272" height="32"/>
                         <color key="backgroundColor" name="AppLightBlue"/>
                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
-                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
                     </textField>
                 </subviews>
                 <constraints>

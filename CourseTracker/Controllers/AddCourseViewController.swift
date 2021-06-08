@@ -15,18 +15,17 @@ class AddCourseViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var courseMinutes: UITextField!
     @IBOutlet weak var saveAddCourse: UIBarButtonItem!
     @IBOutlet weak var websiteList: UITableView!
-    
-    @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
-    
+        
     @IBOutlet weak var tableHeight: NSLayoutConstraint!
     
     private var requiredFields:[UITextField] = []
     private var tabFields:[UITextField] = []
     private var tabFieldsIndex = 0
-    private var noConstraints = true
     
     private var selectedCell:UITableViewCell?
     private var selectedSite:Site?
+    
+    @IBOutlet weak var allScrollView: UIScrollView!
     
     private struct Site {
         var uiLabel:String
@@ -69,13 +68,16 @@ class AddCourseViewController: UIViewController, UITableViewDelegate {
     
     @objc private func keyboardShown(keyboardShowNotification notification: Notification) {
         if let userInfo = notification.userInfo {
-            let keyboardHeight = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue.size.height
-            scrollViewBottomConstraint.constant = -keyboardHeight
+            let keyboardHeight = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size.height
+            let contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardHeight, right: 0.0)
+            allScrollView.contentInset = contentInset
+            allScrollView.scrollIndicatorInsets = contentInset
         }
     }
     
     @objc private func keyboardHidden(keyboardDidHideNotification notification: Notification) {
-        scrollViewBottomConstraint.constant = 0
+        allScrollView.contentInset = UIEdgeInsets.zero
+        allScrollView.scrollIndicatorInsets = UIEdgeInsets.zero
     }
     
     override func viewDidAppear(_ animated: Bool) {

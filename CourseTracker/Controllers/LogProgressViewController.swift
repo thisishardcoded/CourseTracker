@@ -16,7 +16,7 @@ class LogProgressViewController: UIViewController {
     @IBOutlet weak var minutesTaken: UITextField!
     @IBOutlet weak var saveLogProgress: UIBarButtonItem!
     @IBOutlet weak var allForms: UIStackView!
-    @IBOutlet weak var scrollViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var allScrollView: UIScrollView!
     
     private var allFields:[UITextField] = []
     
@@ -36,13 +36,16 @@ class LogProgressViewController: UIViewController {
     
     @objc private func keyboardShown(keyboardShowNotification notification: Notification) {
         if let userInfo = notification.userInfo {
-            let keyboardHeight = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue.size.height
-            scrollViewBottom.constant = -keyboardHeight
+            let keyboardHeight = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size.height
+            let contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardHeight, right: 0.0)
+            allScrollView.contentInset = contentInset
+            allScrollView.scrollIndicatorInsets = contentInset
         }
     }
     
     @objc private func keyboardHidden(keyboardDidHideNotification notification: Notification) {
-        scrollViewBottom.constant = 0
+        allScrollView.contentInset = UIEdgeInsets.zero
+        allScrollView.scrollIndicatorInsets = UIEdgeInsets.zero
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -90,6 +93,21 @@ extension LogProgressViewController:UITextFieldDelegate {
             }
         }
         saveLogProgress.isEnabled = formComplete
+        
+        var formErrors = false
+        if let ht = Int(hoursTaken.text!), let mt = Int(minutesTaken.text!) {
+            if ht == 0 && mt == 0 {
+                formErrors = true
+            }
+        }
+        if let hc = Int(hoursCompleted.text!), let mc = Int(minutesCompleted.text!) {
+            if hc == 0 && mc == 0 {
+                formErrors = true
+            }
+        }
+        if saveLogProgress.isEnabled {
+            saveLogProgress.isEnabled = formErrors == false
+        }
     }
     
 }

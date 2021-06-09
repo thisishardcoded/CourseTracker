@@ -55,17 +55,16 @@ class LogProgressViewController: UIViewController {
     
     @IBAction func saveLogProgress(_ sender: UIBarButtonItem) {
         if let delegate = self.delegate {
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext,
-                totalSecondsCompleted = (Int32(minutesCompleted.text!)! + (Int32(hoursCompleted.text!)! * 60)) * 60,
+            let totalSecondsCompleted = (Int32(minutesCompleted.text!)! + (Int32(hoursCompleted.text!)! * 60)) * 60,
                 totalSecondsTaken = (Int32(minutesTaken.text!)! + (Int32(hoursTaken.text!)! * 60)) * 60,
-                logItem = LogItem(context: context)
+                logItem = LogItem(context: PersistentContainer.sharedInstance.context)
             logItem.completed = totalSecondsCompleted
             logItem.taken = totalSecondsTaken
             logItem.date = Date()
             logItem.parentCourse = course
             
             do {
-                try context.save()
+                try PersistentContainer.sharedInstance.context.save()
                 delegate.modalReturnsLogProgress!(true)
                 self.dismiss(animated: true, completion: nil)
             } catch {

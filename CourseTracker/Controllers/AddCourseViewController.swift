@@ -91,16 +91,15 @@ class AddCourseViewController: UIViewController, UITableViewDelegate {
     
     @IBAction func saveAddCourse(_ sender: UIBarButtonItem) {
         if let delegate = self.delegate, let site = selectedSite {
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext,
-                totalSecondsDuration = (Int32(courseMinutes.text!)! + Int32(courseHours.text!)! * 60) * 60,
-                course = Course(context: context)
+            let totalSecondsDuration = (Int32(courseMinutes.text!)! + Int32(courseHours.text!)! * 60) * 60,
+                course = Course(context: PersistentContainer.sharedInstance.context)
             course.duration = totalSecondsDuration
             course.title = courseTitle.text
             course.iconReference = site.icon
             course.website = site.url
             course.date = Date()
             do {
-                try context.save()
+                try PersistentContainer.sharedInstance.context.save()
                 delegate.modalReturnsAddCourse!(true)
                 self.dismiss(animated: true, completion: nil)
             } catch {

@@ -154,11 +154,10 @@ class CourseViewController: UIViewController, ChartViewDelegate {
     }
     
     func clearLastLog(action: UIAlertAction) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext,
-            sortedItems = (course!.logs as! Set<LogItem>).sorted(by: { $0.date! < $1.date! })
-        context.delete(sortedItems[sortedItems.count - 1])
+        let sortedItems = (course!.logs as! Set<LogItem>).sorted(by: { $0.date! < $1.date! })
+        PersistentContainer.sharedInstance.context.delete(sortedItems[sortedItems.count - 1])
         do {
-            try context.save()
+            try PersistentContainer.sharedInstance.context.save()
             updateAll()
         } catch {
             print("Error saving context clearLastLog \(error)")
@@ -166,13 +165,12 @@ class CourseViewController: UIViewController, ChartViewDelegate {
     }
     
     func clearAllLogs(action: UIAlertAction) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext,
-            sortedItems = (course!.logs as! Set<LogItem>).sorted(by: { $0.date! < $1.date! })
+        let sortedItems = (course!.logs as! Set<LogItem>).sorted(by: { $0.date! < $1.date! })
         for i in 0...sortedItems.count - 1 {
-            context.delete(sortedItems[i])
+            PersistentContainer.sharedInstance.context.delete(sortedItems[i])
         }
         do {
-            try context.save()
+            try PersistentContainer.sharedInstance.context.save()
             updateAll()
         } catch {
             print("Error saving context clearAllLogs \(error)")
@@ -194,10 +192,9 @@ class CourseViewController: UIViewController, ChartViewDelegate {
     
     func deleteEntireCourse(action: UIAlertAction) {
 
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        context.delete(course!)
+        PersistentContainer.sharedInstance.context.delete(course!)
         do {
-            try context.save()
+            try PersistentContainer.sharedInstance.context.save()
             navigationController?.popViewController(animated: true)
         } catch {
             print("Error saving context deleteEntireCourse \(error)")

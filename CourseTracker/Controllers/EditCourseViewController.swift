@@ -66,19 +66,17 @@ class EditCourseViewController: UIViewController {
     
     @IBAction func saveEditCourse(_ sender: UIBarButtonItem) {
         if let delegate = self.delegate {
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext,
-                totalSecondsDuration = (Int32(minutes.text!)! + Int32(hours.text!)! * 60) * 60
+            let totalSecondsDuration = (Int32(minutes.text!)! + Int32(hours.text!)! * 60) * 60
             course?.title = courseTitle.text
             course?.duration = totalSecondsDuration
             do {
-                try context.save()
+                try PersistentContainer.sharedInstance.context.save()
                 delegate.modalReturnsEditCourse!(true)
                 self.dismiss(animated: true, completion: nil)
             } catch {
                 print("Error saving context saveEditCourse \(error)")
             }
         }
-        // self.dismiss(animated: true, completion: nil)
     }
     
     func checkSaveEnabledConditions() {

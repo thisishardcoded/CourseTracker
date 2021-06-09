@@ -43,12 +43,11 @@ class AllCoursesViewController: UIViewController, UITableViewDataSource {
     }
     
     func loadCourses(){
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let request:NSFetchRequest<Course> = Course.fetchRequest()
         let sort = NSSortDescriptor(key: "date", ascending: false)
         request.sortDescriptors = [sort]
         do {
-            coursesArray = try context.fetch(request)
+            coursesArray = try PersistentContainer.sharedInstance.context.fetch(request)
         } catch {
             print("Error loading context for loadCourses \(error)")
         }

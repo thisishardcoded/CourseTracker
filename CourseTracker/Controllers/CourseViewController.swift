@@ -118,7 +118,7 @@ class CourseViewController: UIViewController, ChartViewDelegate {
         ]
         let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: nil)
         pieChartDataSet.colors = chartColours
-        
+
         pieChartDataSet.drawValuesEnabled = false
         pieChartDataSet.selectionShift = 0
         let pieChartData = PieChartData(dataSet: pieChartDataSet)
@@ -200,11 +200,7 @@ class CourseViewController: UIViewController, ChartViewDelegate {
             print("Error saving context deleteEntireCourse \(error)")
         }
     }
-    
-    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
-        print(entry)
-    }
-   
+ 
 }
 
 extension CourseViewController: ModalDelegate {

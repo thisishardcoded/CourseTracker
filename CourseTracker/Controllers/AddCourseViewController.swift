@@ -8,8 +8,8 @@
 import UIKit
 import CoreData
 
-class AddCourseViewController: UIViewController, UITableViewDelegate {
-
+class AddCourseViewController: UIViewController, UITableViewDelegate, MustSizeToKeyboard {
+    
     @IBOutlet weak var courseTitle: UITextField!
     @IBOutlet weak var courseHours: UITextField!
     @IBOutlet weak var courseMinutes: UITextField!
@@ -26,6 +26,7 @@ class AddCourseViewController: UIViewController, UITableViewDelegate {
     private var selectedSite:Site?
     
     @IBOutlet weak var allScrollView: UIScrollView!
+    var viewMustSizeToKeyboard: UIScrollView?
     
     private struct Site {
         var uiLabel:String
@@ -62,22 +63,8 @@ class AddCourseViewController: UIViewController, UITableViewDelegate {
         websiteList.dataSource = self
         websiteList.register(UINib(nibName: "NamedSiteCell", bundle: nil), forCellReuseIdentifier: "NamedSiteCell")
         websiteList.register(UINib(nibName: "OtherSiteCell", bundle: nil), forCellReuseIdentifier: "OtherSiteCell")
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShown(keyboardShowNotification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHidden(keyboardDidHideNotification:)), name: UIResponder.keyboardDidHideNotification, object: nil)
-    }
-    
-    @objc private func keyboardShown(keyboardShowNotification notification: Notification) {
-        if let userInfo = notification.userInfo {
-            let keyboardHeight = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size.height
-            let contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardHeight, right: 0.0)
-            allScrollView.contentInset = contentInset
-            allScrollView.scrollIndicatorInsets = contentInset
-        }
-    }
-    
-    @objc private func keyboardHidden(keyboardDidHideNotification notification: Notification) {
-        allScrollView.contentInset = UIEdgeInsets.zero
-        allScrollView.scrollIndicatorInsets = UIEdgeInsets.zero
+        viewMustSizeToKeyboard = allScrollView
+        registerMustSizeToKeyboard()
     }
     
     override func viewDidAppear(_ animated: Bool) {

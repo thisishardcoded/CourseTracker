@@ -30,6 +30,7 @@
 		38429A11264978180040FFD2 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 384299FF264978180040FFD2 /* Poppins-LightItalic.ttf */; };
 		3845EA75265CEEC80017E5AF /* OtherSiteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3845EA74265CEEC80017E5AF /* OtherSiteTextField.swift */; };
 		386C828C2670C0BD008AA1A7 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C828B2670C0BD008AA1A7 /* PersistentContainer.swift */; };
+		386C828F2670C178008AA1A7 /* MustSizeToKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C828E2670C178008AA1A7 /* MustSizeToKeyboard.swift */; };
 		386EE0C9265BC96700036CEE /* NamedSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386EE0C7265BC96700036CEE /* NamedSiteCell.swift */; };
 		386EE0CA265BC96700036CEE /* NamedSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386EE0C8265BC96700036CEE /* NamedSiteCell.xib */; };
 		386EE0D3265BFF7600036CEE /* OtherSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386EE0D2265BFF7600036CEE /* OtherSiteCell.xib */; };
@@ -75,6 +76,7 @@
 		384299FF264978180040FFD2 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
 		3845EA74265CEEC80017E5AF /* OtherSiteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherSiteTextField.swift; sourceTree = "<group>"; };
 		386C828B2670C0BD008AA1A7 /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
+		386C828E2670C178008AA1A7 /* MustSizeToKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustSizeToKeyboard.swift; sourceTree = "<group>"; };
 		386EE0C7265BC96700036CEE /* NamedSiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamedSiteCell.swift; sourceTree = "<group>"; };
 		386EE0C8265BC96700036CEE /* NamedSiteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NamedSiteCell.xib; sourceTree = "<group>"; };
 		386EE0D2265BFF7600036CEE /* OtherSiteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherSiteCell.xib; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				38251FAF2653CB42003F0A99 /* ModalDelegate.swift */,
 				381040FC265FE83600ADAFCA /* EditCourseViewController.swift */,
 				386FD63C26454B13006DE7A1 /* CourseViewController.swift */,
+				386C828E2670C178008AA1A7 /* MustSizeToKeyboard.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				3845EA75265CEEC80017E5AF /* OtherSiteTextField.swift in Sources */,
 				386FD62426453CC1006DE7A1 /* AppDelegate.swift in Sources */,
 				386FD62626453CC1006DE7A1 /* SceneDelegate.swift in Sources */,
+				386C828F2670C178008AA1A7 /* MustSizeToKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

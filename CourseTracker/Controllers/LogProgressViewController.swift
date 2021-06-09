@@ -8,8 +8,8 @@
 import UIKit
 import CoreData
 
-class LogProgressViewController: UIViewController {
-
+class LogProgressViewController: UIViewController, MustSizeToKeyboard {
+    
     @IBOutlet weak var hoursTaken: UITextField!
     @IBOutlet weak var minutesCompleted: UITextField!
     @IBOutlet weak var hoursCompleted: UITextField!
@@ -19,7 +19,7 @@ class LogProgressViewController: UIViewController {
     @IBOutlet weak var allScrollView: UIScrollView!
     
     private var allFields:[UITextField] = []
-    
+    var         viewMustSizeToKeyboard: UIScrollView?
     var delegate: ModalDelegate?
     var course: Course?
     
@@ -30,24 +30,11 @@ class LogProgressViewController: UIViewController {
         hoursCompleted.delegate = self
         minutesTaken.delegate = self
         allFields = [hoursTaken, minutesCompleted, hoursCompleted, minutesTaken]
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShown(keyboardShowNotification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHidden(keyboardDidHideNotification:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+ 
+        viewMustSizeToKeyboard = allScrollView
+        registerMustSizeToKeyboard()
     }
-    
-    @objc private func keyboardShown(keyboardShowNotification notification: Notification) {
-        if let userInfo = notification.userInfo {
-            let keyboardHeight = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size.height
-            let contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardHeight, right: 0.0)
-            allScrollView.contentInset = contentInset
-            allScrollView.scrollIndicatorInsets = contentInset
-        }
-    }
-    
-    @objc private func keyboardHidden(keyboardDidHideNotification notification: Notification) {
-        allScrollView.contentInset = UIEdgeInsets.zero
-        allScrollView.scrollIndicatorInsets = UIEdgeInsets.zero
-    }
-    
+      
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         hoursTaken.becomeFirstResponder()
@@ -71,7 +58,6 @@ class LogProgressViewController: UIViewController {
                 print("Error saving context \(error)")
             }
         }
-        // self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelLogProgresss(_ sender: UIBarButtonItem) {

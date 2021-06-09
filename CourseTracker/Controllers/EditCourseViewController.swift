@@ -7,10 +7,7 @@
 
 import UIKit
 
-class EditCourseViewController: UIViewController {
-
-    var delegate: ModalDelegate?
-    var course: Course?
+class EditCourseViewController: UIViewController, MustSizeToKeyboard {
     
     @IBOutlet weak var courseTitle: UITextField!
     @IBOutlet weak var hours: UITextField!
@@ -19,6 +16,9 @@ class EditCourseViewController: UIViewController {
     @IBOutlet weak var allScrollView: UIScrollView!
     
     var requiredFields:[UITextField] = []
+    var viewMustSizeToKeyboard: UIScrollView?
+    var delegate: ModalDelegate?
+    var course: Course?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,28 +36,15 @@ class EditCourseViewController: UIViewController {
         courseTitle.delegate = self
         hours.delegate = self
         minutes.delegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShown(keyboardShowNotification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHidden(keyboardDidHideNotification:)), name: UIResponder.keyboardDidHideNotification, object: nil)
         checkSaveEnabledConditions()
+        
+        viewMustSizeToKeyboard = allScrollView
+        registerMustSizeToKeyboard()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         courseTitle.becomeFirstResponder()
-    }
-
-    @objc private func keyboardShown(keyboardShowNotification notification: Notification) {
-        if let userInfo = notification.userInfo {
-            let keyboardHeight = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size.height
-            let contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardHeight, right: 0.0)
-            allScrollView.contentInset = contentInset
-            allScrollView.scrollIndicatorInsets = contentInset
-        }
-    }
-    
-    @objc private func keyboardHidden(keyboardDidHideNotification notification: Notification) {
-        allScrollView.contentInset = UIEdgeInsets.zero
-        allScrollView.scrollIndicatorInsets = UIEdgeInsets.zero
     }
     
     @IBAction func cancelEditCourse(_ sender: UIBarButtonItem) {

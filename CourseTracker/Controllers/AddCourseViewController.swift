@@ -43,10 +43,10 @@ class AddCourseViewController: UIViewController, UITableViewDelegate, MustSizeTo
     
     private var sites:[Site] = [
         Site("Udemy", "Udemy", "http://www.udemy.com", "UdemyLogo"),
-        Site("Coursera", "Coursera", "https://www.coursera.org", "courseraLogo"),
-        Site("LinkedIn Learning", "LinkedIn Learning", "https://www.linkedin.com/learning", "linkedInLearning"),
-        Site("edX", "edX", "https://www.edx.org", "edxLogo"),
-        Site("Code Academy", "Code Academy", "https://www.codecademy.com", "codeAcademyLogo"),
+        Site("Coursera", "Coursera", "http://www.coursera.org", "courseraLogo"),
+        Site("LinkedIn Learning", "LinkedIn Learning", "http://www.linkedin.com/learning", "linkedInLearning"),
+        Site("edX", "edX", "http://www.edx.org", "edxLogo"),
+        Site("Code Academy", "Code Academy", "http://www.codecademy.com", "codeAcademyLogo"),
         Site("Other", "", "", "onCourseIcon")
     ]
     

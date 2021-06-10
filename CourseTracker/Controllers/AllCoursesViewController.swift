@@ -17,7 +17,6 @@ class AllCoursesViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         allCourses.dataSource = self
         allCourses.delegate = self

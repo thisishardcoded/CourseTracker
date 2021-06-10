@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "onCourse.png",
+      "filename" : "onclogo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "onCourse@2x.png",
+      "filename" : "onclogo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "onCourse@3x.png",
+      "filename" : "onclogo@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
